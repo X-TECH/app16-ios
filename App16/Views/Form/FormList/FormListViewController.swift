@@ -18,11 +18,4 @@ class FormListViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    
-    private func openCreateFormViewController() {
-        
-        let controller = SingleFormViewController()
-        let navController = UINavigationController(rootViewController: controller)
-        self.present(navController, animated: true, completion: nil)
-    }
 }

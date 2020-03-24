@@ -35,6 +35,8 @@
 		C5D691AB242AC17D004268C3 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D691AA242AC17D004268C3 /* UIView+Extensions.swift */; };
 		C5D691AF242AC607004268C3 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D691AD242AC607004268C3 /* WelcomeViewController.swift */; };
 		C5D691B0242AC607004268C3 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5D691AE242AC607004268C3 /* WelcomeViewController.xib */; };
+		C5D691B4242AD290004268C3 /* QrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D691B2242AD290004268C3 /* QrViewController.swift */; };
+		C5D691B5242AD290004268C3 /* QrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5D691B3242AD290004268C3 /* QrViewController.xib */; };
 		DFF30959C2696CFA212F54E4 /* Pods_App16.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC947C811CE3C096F8981C77 /* Pods_App16.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,8 @@
 		C5D691AA242AC17D004268C3 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		C5D691AD242AC607004268C3 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C5D691AE242AC607004268C3 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		C5D691B2242AD290004268C3 /* QrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrViewController.swift; sourceTree = "<group>"; };
+		C5D691B3242AD290004268C3 /* QrViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QrViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,7 @@
 		C5D6916C242AA460004268C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C5D691B1242AD26C004268C3 /* Qr */,
 				C5D6919B242AADBD004268C3 /* Main */,
 				C5D691AC242AC5F3004268C3 /* Welcome */,
 				C5D69186242AABFA004268C3 /* Login */,
@@ -293,6 +298,15 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
+		C5D691B1242AD26C004268C3 /* Qr */ = {
+			isa = PBXGroup;
+			children = (
+				C5D691B2242AD290004268C3 /* QrViewController.swift */,
+				C5D691B3242AD290004268C3 /* QrViewController.xib */,
+			);
+			path = Qr;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,6 +371,7 @@
 				C5D69195242AAD00004268C3 /* SingleFormViewController.xib in Resources */,
 				C5D6915A242AA094004268C3 /* LaunchScreen.storyboard in Resources */,
 				C5D6919A242AAD3F004268C3 /* FormCreateViewController.xib in Resources */,
+				C5D691B5242AD290004268C3 /* QrViewController.xib in Resources */,
 				C5D69190242AAC86004268C3 /* FormListViewController.xib in Resources */,
 				C5D691B0242AC607004268C3 /* WelcomeViewController.xib in Resources */,
 				C5D69157242AA094004268C3 /* Assets.xcassets in Resources */,
@@ -426,6 +441,7 @@
 				C5D69194242AAD00004268C3 /* SingleFormViewController.swift in Sources */,
 				C5D69170242AA4E9004268C3 /* Config.swift in Sources */,
 				C5D6916E242AA4D2004268C3 /* Settings.swift in Sources */,
+				C5D691B4242AD290004268C3 /* QrViewController.swift in Sources */,
 				C5D691AB242AC17D004268C3 /* UIView+Extensions.swift in Sources */,
 				C5D69177242AA573004268C3 /* ValidationError.swift in Sources */,
 				C5D6917D242AA5BE004268C3 /* UserDefaultsHelper.swift in Sources */,
