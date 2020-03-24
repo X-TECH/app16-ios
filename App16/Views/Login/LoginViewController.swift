@@ -9,6 +9,12 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextFiled: UITextField!
+    @IBOutlet weak var middleNameTextField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
+    
 
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -16,10 +22,31 @@ class LoginViewController: UIViewController {
 
     }
     
+    // MARK: - Navigation
     private func openCreateFormViewController() {
         
         let controller = FormCreateViewController()
         let navController = UINavigationController(rootViewController: controller)
         self.present(navController, animated: true, completion: nil)
+    }
+    
+    private func openWelcomeController() {
+        
+        let controller = WelcomeViewController()
+        changeRoot(UINavigationController(rootViewController: controller))
+    }
+    
+    // MARK: - Actions
+    @IBAction func nextButtonAction(_ sender: Any) {
+        
+        if firstNameTextField.text == ""
+            || lastNameTextFiled.text == ""
+            || middleNameTextField.text == "" {
+            
+            let alertController = AlertControllerHelper.showAlert(title: nil, message: "Խնդում ենք լրացրեք բոլոր դաշտերը")
+            self.present(alertController, animated: true, completion: nil)
+        }else {
+            openWelcomeController()
+        }
     }
 }

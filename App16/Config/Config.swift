@@ -11,7 +11,7 @@ import Foundation
 struct Config {
     
     static let ENVIRONMENT = "DEV"
-    static let HOST_NAME = "openweathermap.org"
+    static let HOST_NAME = "test"
     static let BASE_URL = "https://api." + Config.HOST_NAME + "/data/2.5"
     static let API_TOKEN = ""
     static let API_VERSION = "v1"

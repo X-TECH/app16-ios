@@ -12,6 +12,7 @@ target 'App16' do
     pod 'Alamofire', '~> 4.3'
     pod 'AlamofireObjectMapper', '~> 5.2'
     pod 'AlamofireImage', '~> 3.5'
+    pod 'IQKeyboardManagerSwift'
 
   # Pods for App16
 

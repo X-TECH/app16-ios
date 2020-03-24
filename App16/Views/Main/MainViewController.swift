@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
     private func openLoginViewController() {
         
         let controller = LoginViewController()
-        changeRoot(UINavigationController(rootViewController: controller))
+        changeRoot(controller)
     }
     
     private func openFormCreateController() {

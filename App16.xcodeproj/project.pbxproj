@@ -32,6 +32,9 @@
 		C5D6919A242AAD3F004268C3 /* FormCreateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5D69198242AAD3F004268C3 /* FormCreateViewController.xib */; };
 		C5D691A1242AAE12004268C3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D691A0242AAE12004268C3 /* MainViewController.swift */; };
 		C5D691A4242AAF13004268C3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D691A3242AAF13004268C3 /* Extensions.swift */; };
+		C5D691AB242AC17D004268C3 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D691AA242AC17D004268C3 /* UIView+Extensions.swift */; };
+		C5D691AF242AC607004268C3 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D691AD242AC607004268C3 /* WelcomeViewController.swift */; };
+		C5D691B0242AC607004268C3 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5D691AE242AC607004268C3 /* WelcomeViewController.xib */; };
 		DFF30959C2696CFA212F54E4 /* Pods_App16.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC947C811CE3C096F8981C77 /* Pods_App16.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +69,9 @@
 		C5D69198242AAD3F004268C3 /* FormCreateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormCreateViewController.xib; sourceTree = "<group>"; };
 		C5D691A0242AAE12004268C3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C5D691A3242AAF13004268C3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C5D691AA242AC17D004268C3 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		C5D691AD242AC607004268C3 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		C5D691AE242AC607004268C3 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				C5D6919B242AADBD004268C3 /* Main */,
+				C5D691AC242AC5F3004268C3 /* Welcome */,
 				C5D69186242AABFA004268C3 /* Login */,
 				C5D69187242AAC05004268C3 /* Form */,
 			);
@@ -265,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				C5D691A3242AAF13004268C3 /* Extensions.swift */,
+				C5D691AA242AC17D004268C3 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +282,15 @@
 			children = (
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		C5D691AC242AC5F3004268C3 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				C5D691AD242AC607004268C3 /* WelcomeViewController.swift */,
+				C5D691AE242AC607004268C3 /* WelcomeViewController.xib */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +358,7 @@
 				C5D6915A242AA094004268C3 /* LaunchScreen.storyboard in Resources */,
 				C5D6919A242AAD3F004268C3 /* FormCreateViewController.xib in Resources */,
 				C5D69190242AAC86004268C3 /* FormListViewController.xib in Resources */,
+				C5D691B0242AC607004268C3 /* WelcomeViewController.xib in Resources */,
 				C5D69157242AA094004268C3 /* Assets.xcassets in Resources */,
 				C5D69155242AA091004268C3 /* Main.storyboard in Resources */,
 			);
@@ -396,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5D69184242AABD2004268C3 /* LoginViewController.swift in Sources */,
+				C5D691AF242AC607004268C3 /* WelcomeViewController.swift in Sources */,
 				C5D691A4242AAF13004268C3 /* Extensions.swift in Sources */,
 				C5D69179242AA58F004268C3 /* BaseResponse.swift in Sources */,
 				C5D69199242AAD3F004268C3 /* FormCreateViewController.swift in Sources */,
@@ -407,6 +426,7 @@
 				C5D69194242AAD00004268C3 /* SingleFormViewController.swift in Sources */,
 				C5D69170242AA4E9004268C3 /* Config.swift in Sources */,
 				C5D6916E242AA4D2004268C3 /* Settings.swift in Sources */,
+				C5D691AB242AC17D004268C3 /* UIView+Extensions.swift in Sources */,
 				C5D69177242AA573004268C3 /* ValidationError.swift in Sources */,
 				C5D6917D242AA5BE004268C3 /* UserDefaultsHelper.swift in Sources */,
 				C5D69150242AA091004268C3 /* SceneDelegate.swift in Sources */,
