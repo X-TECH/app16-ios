@@ -15,7 +15,9 @@
                 <outlet property="destinationAddressTextField" destination="rPL-7I-ofi" id="TjC-eL-miv"/>
                 <outlet property="destinationTypeTextField" destination="4aW-Ax-Ff0" id="e4d-zH-y4m"/>
                 <outlet property="outAddressTextFiled" destination="mYS-bW-6ay" id="cWv-wV-KGV"/>
+                <outlet property="outDateButtonAction" destination="PvO-en-2tn" id="jZ5-9P-rNL"/>
                 <outlet property="outDateTimeTextFiled" destination="1V6-3e-Iop" id="udW-wX-Bcq"/>
+                <outlet property="planneDateTimeButton" destination="Je5-zZ-aSZ" id="r1W-uE-hv6"/>
                 <outlet property="planneDateTimeTextField" destination="suG-e6-CV9" id="z7Q-ns-46L"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

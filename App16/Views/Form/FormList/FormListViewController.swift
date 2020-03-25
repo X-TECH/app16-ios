@@ -15,7 +15,7 @@ class FormListViewController: UIViewController {
     
     // MARK: - Varibales
     private let formListCell = "FormListCell"
-    var dataSource: [FormCreateResponse] = []
+    var dataSource: [FormResponse] = []
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -93,6 +93,8 @@ extension FormListViewController: UITableViewDelegate {
     private func openCreateFormView() {
         
         let controller = FormCreateViewController()
+        controller.isCreateMode = false
+        self.navigationController?.navigationBar.topItem?.title = " "
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }

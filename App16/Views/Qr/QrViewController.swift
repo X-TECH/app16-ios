@@ -49,6 +49,8 @@ class QrViewController: UIViewController {
     private func openCreateFormView() {
         
         let controller = FormCreateViewController()
+        controller.isCreateMode = false
+        self.navigationController?.navigationBar.topItem?.title = " "
         self.navigationController?.pushViewController(controller, animated: true)
     }
     

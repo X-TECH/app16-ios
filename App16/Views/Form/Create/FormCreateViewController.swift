@@ -22,11 +22,22 @@ class FormCreateViewController: UIViewController {
     
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var outDateButtonAction: UIButton!
+    @IBOutlet weak var planneDateTimeButton: UIButton!
+    
+    var isCreateMode = false
    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if isCreateMode {
+            createButton.isHidden = false
+        }else {
+            createButton.isHidden = true
+            retriveCurentForm()
+        }
     }
     @IBAction func outDateButtonAction(_ sender: UIButton) {
         
@@ -113,5 +124,51 @@ class FormCreateViewController: UIViewController {
                 return
             }
         }
+    }
+    
+    private func retriveCurentForm() {
+          
+          let form = CurentFormRequestForm(deviceToken: UIDevice.current.identifierForVendor?.uuidString)
+          
+          CurrentFormService.shered.retrive(data: form) { (weaterResponseData) in
+              switch weaterResponseData {
+              case .base(response: let baseResposne):
+                  CheckBaseHelper.checkBaseResponse(baseResposne, viewController: self)
+              case .success(let response):
+                
+                DispatchQueue.main.async {
+                    self.setData(response: response)
+                }
+                
+              case .isOffline:
+                  
+                  return
+              case .conflict:
+    
+                
+                  return
+              }
+          }
+      }
+    
+    private func setData(response: FormCreateResponse) {
+        
+        destinationAddressTextField.isUserInteractionEnabled = false
+        planneDateTimeTextField.isUserInteractionEnabled = false
+        destinationTypeTextField.isUserInteractionEnabled = false
+        destinationAddressTextField.isUserInteractionEnabled = false
+        
+        outDateButtonAction.isUserInteractionEnabled = false
+        planneDateTimeButton.isUserInteractionEnabled = false
+        
+        outDateTimeTextFiled.isUserInteractionEnabled = false
+        planneDateTimeTextField.isUserInteractionEnabled = false
+        
+        outDateTimeTextFiled.text = response.data?.outDatetime
+        outAddressTextFiled.text = response.data?.outAddress
+        
+        destinationAddressTextField.text = response.data?.visitingAddressAndName
+        planneDateTimeTextField.text = response.data?.plannedReturnDatetime
+        destinationTypeTextField.text = response.data?.visitingReason
     }
 }

@@ -14,7 +14,7 @@ class FormsService {
     
     static let shered = FormsService()
     
-    func retriveForms(data: CurentFormRequestForm, completion: @escaping ((FormsResponseResponseData<FormsResponse>) -> Void)) {
+    func retriveForms(data: CurentFormRequestForm, completion: @escaping ((FormsResponseData<FormsResponse>) -> Void)) {
         
         BaseService.shared.get(endpoint: "/applications", parameters: data.toJSON(), for: .unsecure)
             .responseString { (response) in

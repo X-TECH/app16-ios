@@ -1,16 +1,16 @@
 //
-//  FormCreateRequestForm.swift
+//  Form.swift
 //  App16
 //
 //  Created by Grigor Aghabalyan on 3/25/20.
 //  Copyright © 2020 X-TECH. All rights reserved.
 //
 
-import Foundation
 import ObjectMapper
 
-class FormCreateRequestForm: Mappable {
+class FormResponse: Mappable {
     
+    var id: Int?
     var deviceToken: String?
     var firstName: String?
     var lastName: String?
@@ -24,40 +24,14 @@ class FormCreateRequestForm: Mappable {
     var visitingLongitude: Double?
     var visitingReason: String?
     var plannedReturnDatetime: String?
-   
-    required init?(map: Map) { }
+    var createdAt: String?
     
-    init(deviceToken: String?,
-         firstName: String?,
-         lastName: String?,
-         middleName: String?,
-         outAddress: String?,
-         outLatitude: Double?,
-         outLongitude: Double?,
-         outDatetime: String?,
-         visitingAddressAndName: String?,
-         visitingLatitude: Double?,
-         visitingLongitude: Double?,
-         visitingReason: String?,
-         plannedReturnDatetime: String?) {
-        
-        self.deviceToken = deviceToken
-        self.firstName = firstName
-        self.lastName = lastName
-        self.middleName = middleName
-        self.outAddress = outAddress
-        self.outLatitude = outLatitude
-        self.outLongitude = outLongitude
-        self.outDatetime = outDatetime
-        self.visitingAddressAndName = visitingAddressAndName
-        self.visitingLatitude = visitingLatitude
-        self.visitingLongitude = visitingLongitude
-        self.visitingReason = visitingReason
-        self.plannedReturnDatetime = plannedReturnDatetime
-    }
+    required init?(map: Map) { }
+    init() { }
     
     func mapping(map: Map) {
         
+        id <- map["id"]
         deviceToken <- map["device_token"]
         firstName <- map["first_name"]
         lastName <- map["last_name"]
@@ -71,5 +45,14 @@ class FormCreateRequestForm: Mappable {
         visitingLongitude <- map["visiting_longitude"]
         visitingReason <- map["visiting_reason"]
         plannedReturnDatetime <- map["planned_return_datetime"]
+        createdAt <- map["created_at"]
     }
+}
+
+enum FormResponseData<FormResponse> {
+    
+    case success(result: FormResponse)
+    case base(response: BaseResponse)
+    case conflict
+    case isOffline
 }

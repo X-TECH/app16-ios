@@ -46,6 +46,7 @@ class WelcomeViewController: UIViewController {
     @IBAction func createButtonAction(_ sender: UIButton) {
         
         let controller = FormCreateViewController()
+        controller.isCreateMode = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
     

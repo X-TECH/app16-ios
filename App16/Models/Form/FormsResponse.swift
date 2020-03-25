@@ -10,7 +10,7 @@ import ObjectMapper
 
 class FormsResponse: Mappable {
     
-    var data: [FormCreateResponse]?
+    var data: [FormResponse]?
    
    
     required init?(map: Map) { }
@@ -22,9 +22,9 @@ class FormsResponse: Mappable {
     }
 }
 
-enum FormsResponseResponseData<FormCreateResponse> {
+enum FormsResponseData<FormsResponse> {
     
-    case success(result: FormCreateResponse)
+    case success(result: FormsResponse)
     case base(response: BaseResponse)
     case conflict
     case isOffline
