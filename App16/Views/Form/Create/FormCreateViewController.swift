@@ -22,11 +22,34 @@ class FormCreateViewController: UIViewController {
     
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
+   
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    @IBAction func outDateButtonAction(_ sender: UIButton) {
+        
+        let vc = DatePickerViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        
+        vc.getData { [weak self] (date) in
+            self?.outDateTimeTextFiled.text = date
+        }
+        self.present(vc, animated: false, completion: nil)
+    }
+    
+    @IBAction func planneDateTimeButtonAction(_ sender: UIButton) {
+        
+        let vc = DatePickerViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        
+        vc.getData { [weak self] (date) in
+            self?.planneDateTimeTextField.text = date
+        }
+        self.present(vc, animated: false, completion: nil)
     }
     
     @IBAction func createButtonAction(_ sender: UIButton) {
@@ -56,21 +79,22 @@ class FormCreateViewController: UIViewController {
         let firstName = UserDefaultsHelper.getString(for: .firstName)
         let lastName = UserDefaultsHelper.getString(for: .lstName)
         let middleName = UserDefaultsHelper.getString(for: .middleName)
-        let deviceToken = UserDefaultsHelper.getString(for: .deviceToken)
+        let deviceId = UIDevice.current.identifierForVendor?.uuidString
+        let date = Date().toString(dateFormat: DateFormat.StandartDate.rawValue)
         
-        let form = FormCreateRequestForm(deviceToken: deviceToken,
+        let form = FormCreateRequestForm(deviceToken: deviceId,
                                          firstName: firstName,
                                          lastName: lastName,
                                          middleName: middleName,
                                          outAddress: outAddressTextFiled.text,
                                          outLatitude: nil,
                                          outLongitude: nil,
-                                         outDatetime: outDateTimeTextFiled.text,
+                                         outDatetime: outDateTimeTextFiled.text != nil ? date + " " + outDateTimeTextFiled.text! : nil,
                                          visitingAddressAndName: destinationAddressTextField.text,
                                          visitingLatitude: nil,
                                          visitingLongitude: nil,
                                          visitingReason: destinationTypeTextField.text,
-                                         plannedReturnDatetime: planneDateTimeTextField.text)
+                                         plannedReturnDatetime: planneDateTimeTextField.text != nil ? date + " " + planneDateTimeTextField.text! : nil)
         
         FormCreateService.shered.createForm(data: form) { (weaterResponseData) in
             switch weaterResponseData {

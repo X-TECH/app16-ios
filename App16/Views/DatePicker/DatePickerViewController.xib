@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SegoePro-Regular.ttf">
+            <string>SegoePro</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerViewController" customModule="App16" customModuleProvider="target">
+            <connections>
+                <outlet property="datePickerView" destination="Vlm-81-gMY" id="rAO-iD-Ddh"/>
+                <outlet property="okButton" destination="42S-LP-YBO" id="6C1-Z8-uju"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AlP-zS-889">
+                    <rect key="frame" x="0.0" y="680" width="414" height="216"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vlm-81-gMY">
+                    <rect key="frame" x="0.0" y="680" width="414" height="216"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </datePicker>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wup-MC-w7E">
+                    <rect key="frame" x="0.0" y="640" width="414" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42S-LP-YBO">
+                            <rect key="frame" x="374" y="5.5" width="40" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="Mv9-ir-cmT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SegoePro" family="Segoe Pro" pointSize="14"/>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" name="pushedButton"/>
+                            </state>
+                            <connections>
+                                <action selector="okButtonAction:" destination="-1" eventType="touchUpInside" id="uaB-gF-59p"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="mainBackground"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="JRD-7R-lKy"/>
+                        <constraint firstAttribute="trailing" secondItem="42S-LP-YBO" secondAttribute="trailing" id="Pmg-3M-cNk"/>
+                        <constraint firstItem="42S-LP-YBO" firstAttribute="centerY" secondItem="wup-MC-w7E" secondAttribute="centerY" id="bSK-wy-qgE"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="AlP-zS-889" firstAttribute="height" secondItem="Vlm-81-gMY" secondAttribute="height" id="26N-UT-cqK"/>
+                <constraint firstItem="Vlm-81-gMY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6pS-By-OLO"/>
+                <constraint firstAttribute="bottom" secondItem="AlP-zS-889" secondAttribute="bottom" id="8ia-rd-X60"/>
+                <constraint firstItem="wup-MC-w7E" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="EJN-Qz-bYy"/>
+                <constraint firstItem="wup-MC-w7E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="REu-Th-JwF"/>
+                <constraint firstItem="AlP-zS-889" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="c11-rF-0ug"/>
+                <constraint firstItem="Vlm-81-gMY" firstAttribute="top" secondItem="wup-MC-w7E" secondAttribute="bottom" id="iXh-Qb-mCh"/>
+                <constraint firstItem="Vlm-81-gMY" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="pMy-pd-ffn"/>
+                <constraint firstAttribute="bottom" secondItem="Vlm-81-gMY" secondAttribute="bottom" id="zPK-we-oZB"/>
+                <constraint firstItem="AlP-zS-889" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zf5-Ey-a13"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="mainBackground">
+            <color red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="pushedButton">
+            <color red="0.21568627450980393" green="0.5490196078431373" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

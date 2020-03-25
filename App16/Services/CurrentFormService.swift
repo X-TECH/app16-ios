@@ -1,5 +1,5 @@
 //
-//  FormCreateService.swift
+//  CurrentFormService.swift
 //  App16
 //
 //  Created by Grigor Aghabalyan on 3/25/20.
@@ -10,18 +10,15 @@ import ObjectMapper
 import AlamofireObjectMapper
 import Alamofire
 
-import ObjectMapper
-import AlamofireObjectMapper
-import Alamofire
-
-class FormCreateService {
+class CurrentFormService {
     
-    static let shered = FormCreateService()
+    static let shered = CurrentFormService()
     
-    func createForm(data: FormCreateRequestForm, completion: @escaping ((FormCreateResponseData<FormCreateResponse>) -> Void)) {
-        BaseService.shared.post(endpoint: "/applications", object: data.toJSON(), for: .unsecure)
+    func retrive(data: CurentFormRequestForm, completion: @escaping ((FormCreateResponseData<FormCreateResponse>) -> Void)) {
+        
+        BaseService.shared.get(endpoint: "/applications/current", parameters: data.toJSON(), for: .unsecure)
             .responseString { (response) in
-                print(response.result.value ?? "result value is nil")
+                //print(response.result.value ?? "result value is nil")
                 if let responseHttp = response.response, let value = response.result.value {
                     if let baseResponse = BaseService.shared.checkBaseResponse(responseHttp, value) {
                         return completion(.base(response: baseResponse))
@@ -30,7 +27,7 @@ class FormCreateService {
                     return completion(.isOffline)
                 }
                 switch response.response?.statusCode ?? 400 {
-                case 200...201:
+                case 200:
                     if let value = response.result.value, let data = Mapper<FormCreateResponse>().map(JSONString: value) {
                         return completion(.success(result: data))
                     }

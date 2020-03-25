@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QrViewController" customModule="App16" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="ahX-zy-qBz" id="AZ6-3u-nDS"/>
                 <outlet property="finishButton" destination="pPZ-K4-2Kg" id="7HX-fh-rYR"/>
                 <outlet property="fomrButton" destination="72Y-zH-s26" id="JJK-Uk-0Hu"/>
                 <outlet property="qrImageView" destination="R4q-c0-18T" id="Uvw-YL-6g0"/>
@@ -21,8 +22,9 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr_icon" translatesAutoresizingMaskIntoConstraints="NO" id="R4q-c0-18T">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R4q-c0-18T">
                     <rect key="frame" x="67" y="84" width="280" height="280"/>
+                    <color key="backgroundColor" white="0.67000000000000004" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="R4q-c0-18T" secondAttribute="height" multiplier="1:1" id="TRE-AB-Ndc"/>
                     </constraints>
@@ -71,14 +73,19 @@
                         <action selector="finshButtonAction:" destination="-1" eventType="touchUpInside" id="ACU-84-kQN"/>
                     </connections>
                 </button>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ahX-zy-qBz">
+                    <rect key="frame" x="197" y="214" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pPZ-K4-2Kg" secondAttribute="trailing" constant="40" id="1j4-ji-GHo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="R4q-c0-18T" secondAttribute="trailing" constant="67" id="2d3-D6-vaZ"/>
                 <constraint firstItem="R4q-c0-18T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="67" id="3SQ-6z-RO0"/>
+                <constraint firstItem="ahX-zy-qBz" firstAttribute="centerX" secondItem="R4q-c0-18T" secondAttribute="centerX" id="3bR-Dc-jOo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="72Y-zH-s26" secondAttribute="trailing" constant="40" id="DaE-jl-g2X"/>
                 <constraint firstItem="72Y-zH-s26" firstAttribute="top" secondItem="R4q-c0-18T" secondAttribute="bottom" constant="73" id="OIl-63-hEv"/>
+                <constraint firstItem="ahX-zy-qBz" firstAttribute="centerY" secondItem="R4q-c0-18T" secondAttribute="centerY" id="OSD-PD-NmO"/>
                 <constraint firstItem="pPZ-K4-2Kg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="SYI-BX-jUk"/>
                 <constraint firstItem="R4q-c0-18T" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="Yo3-5M-76K"/>
                 <constraint firstItem="72Y-zH-s26" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="fVE-9w-GhO"/>
@@ -88,7 +95,4 @@
             <point key="canvasLocation" x="139" y="130"/>
         </view>
     </objects>
-    <resources>
-        <image name="qr_icon" width="458" height="460"/>
-    </resources>
 </document>
