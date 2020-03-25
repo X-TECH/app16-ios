@@ -48,7 +48,9 @@ class MainViewController: UIViewController {
                     self.openWelcomeController()
                 }
                 CheckBaseHelper.checkBaseResponse(baseResposne, viewController: self)
-            case .success(_):
+            case .success(let response):
+                UserDefaultsHelper.set(alias: .firstName, value: response.firstName)
+                UserDefaultsHelper.set(alias: .lstName, value: response.lastName)
                 self.openQRController()
             case .isOffline:
                 //self.activityIndicator.stopAnimating()

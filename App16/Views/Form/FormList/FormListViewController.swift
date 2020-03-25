@@ -15,6 +15,7 @@ class FormListViewController: UIViewController {
     
     // MARK: - Varibales
     private let formListCell = "FormListCell"
+    var dataSource: [FormCreateResponse] = []
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -24,6 +25,10 @@ class FormListViewController: UIViewController {
         tableView.dataSource = self
         
         registerCelll()
+        
+        if let deviceId = UIDevice.current.identifierForVendor?.uuidString {
+            retriveCurentForm(deviceToken: deviceId)
+        }
     }
     
     // MARK: - Register
@@ -32,6 +37,31 @@ class FormListViewController: UIViewController {
         let nib = UINib(nibName: formListCell, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: formListCell)
     }
+    
+    private func retriveCurentForm(deviceToken: String) {
+        
+        let form = CurentFormRequestForm(deviceToken: UIDevice.current.identifierForVendor?.uuidString)
+        
+        FormsService.shered.retriveForms(data: form) { (responseData) in
+            switch responseData {
+            case .base(response: let baseResposne):
+                
+                CheckBaseHelper.checkBaseResponse(baseResposne, viewController: self)
+            case .success(let response):
+                self.dataSource = response.data ?? []
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            case .isOffline:
+                //self.activityIndicator.stopAnimating()
+                return
+            case .conflict:
+                //self.activityIndicator.stopAnimating()
+                return
+            }
+        }
+        
+    }
 }
 
 extension FormListViewController: UITableViewDataSource {
@@ -39,12 +69,15 @@ extension FormListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: formListCell, for: indexPath) as? FormListCell
+        cell?.outDateLabel.text = dataSource[indexPath.row].outDatetime
+        cell?.planeDateLabel.text = dataSource[indexPath.row].outDatetime
+        cell?.createdDateLabel.text = dataSource[indexPath.row].createdAt
         return cell ?? UITableViewCell()
     }
 }

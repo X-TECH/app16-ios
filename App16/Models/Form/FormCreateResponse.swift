@@ -23,25 +23,27 @@ class FormCreateResponse: Mappable {
     var visitingLongitude: Double?
     var visitingReason: String?
     var plannedReturnDatetime: String?
-   
+    var createdAt: String?
+    
     required init?(map: Map) { }
     init() { }
     
     func mapping(map: Map) {
         
-         deviceToken <- map["device_token"]
-               firstName <- map["first_name"]
-               lastName <- map["last_name"]
-               middleName <- map["middle_name"]
-               outAddress <- map["out_address"]
-               outLatitude <- map["out_latitude"]
-               outLongitude <- map["out_longitude"]
-               outDatetime <- map["out_datetime"]
-               visitingAddressAndName <- map["visiting_address_and_name"]
-               visitingLatitude <- map["visiting_latitude"]
-               visitingLongitude <- map["visiting_longitude"]
-               visitingReason <- map["visiting_reason"]
-               plannedReturnDatetime <- map["planned_return_datetime"]
+        deviceToken <- map["device_token"]
+        firstName <- map["first_name"]
+        lastName <- map["last_name"]
+        middleName <- map["middle_name"]
+        outAddress <- map["out_address"]
+        outLatitude <- map["out_latitude"]
+        outLongitude <- map["out_longitude"]
+        outDatetime <- map["out_datetime"]
+        visitingAddressAndName <- map["visiting_address_and_name"]
+        visitingLatitude <- map["visiting_latitude"]
+        visitingLongitude <- map["visiting_longitude"]
+        visitingReason <- map["visiting_reason"]
+        plannedReturnDatetime <- map["planned_return_datetime"]
+        createdAt <- map["created_at"]
     }
 }
 
