@@ -49,7 +49,7 @@ class QrViewController: UIViewController {
     private func openCreateFormView() {
         
         let controller = FormCreateViewController()
-        controller.isCreateMode = false
+        controller.formViewType = .viewFromQr
         self.navigationController?.navigationBar.topItem?.title = " "
         self.navigationController?.pushViewController(controller, animated: true)
     }
