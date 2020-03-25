@@ -9,6 +9,7 @@
 import Foundation
 
 enum DateFormat: String {
+    
     case ShortDate = "MM/dd/yyyy"
     case LongDate = "MMMM dd, yyyy"
     case EventClientDate = "dd MMMM yyyy"

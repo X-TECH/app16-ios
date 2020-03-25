@@ -20,6 +20,11 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         setRightBarButton()
+        
+        let firstName = UserDefaultsHelper.getString(for: .firstName)
+        let lastName = UserDefaultsHelper.getString(for: .lstName)
+        
+        nameLabel.text = (firstName ?? "-") + " " + (lastName ?? "-")
     }
     
     private func setRightBarButton() {
@@ -40,9 +45,16 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func createButtonAction(_ sender: UIButton) {
         
+        let controller = FormCreateViewController()
+        controller.isCreateMode = true
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func historyButtonAction(_ sender: UIButton) {
+        
+        let controller = FormListViewController()
+        self.navigationController?.navigationBar.topItem?.title = " "
+        self.navigationController?.pushViewController(controller, animated: true)
         
     }
 }
