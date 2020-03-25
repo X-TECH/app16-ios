@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormListViewController" customModule="App16" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="5tF-n7-YKL" id="jRm-bP-GRh"/>
                 <outlet property="tableView" destination="HZb-fy-7lq" id="4bl-6f-doL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,12 +24,17 @@
                     <rect key="frame" x="0.0" y="52" width="414" height="844"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="5tF-n7-YKL">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="HZb-fy-7lq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2Ot-Go-5dk"/>
                 <constraint firstItem="HZb-fy-7lq" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="JJa-S3-A8H"/>
+                <constraint firstItem="5tF-n7-YKL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="JRh-dp-FPF"/>
                 <constraint firstAttribute="bottom" secondItem="HZb-fy-7lq" secondAttribute="bottom" id="Ma1-TH-OLm"/>
+                <constraint firstItem="5tF-n7-YKL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PZ1-5Q-16f"/>
                 <constraint firstItem="HZb-fy-7lq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="dLk-Zr-Bbk"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
