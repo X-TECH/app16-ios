@@ -32,7 +32,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kwt-kc-N2e">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="621"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="646"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azo-7T-DFW" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
                                     <rect key="frame" x="40" y="55" width="334" height="50"/>
@@ -292,7 +292,7 @@
                                 <constraint firstAttribute="trailing" secondItem="NyF-FR-xam" secondAttribute="trailing" constant="40" id="De8-qX-Ukc"/>
                                 <constraint firstAttribute="trailing" secondItem="JD7-Yf-hQj" secondAttribute="trailing" constant="40" id="DlW-PC-fOe"/>
                                 <constraint firstItem="NyF-FR-xam" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="40" id="FI1-KC-yTn"/>
-                                <constraint firstAttribute="bottom" secondItem="NyF-FR-xam" secondAttribute="bottom" constant="20" id="FW4-Nj-AYg"/>
+                                <constraint firstAttribute="bottom" secondItem="NyF-FR-xam" secondAttribute="bottom" constant="45" id="FW4-Nj-AYg"/>
                                 <constraint firstAttribute="trailing" secondItem="XIU-P6-Fzz" secondAttribute="trailing" constant="40" id="GAa-mM-fJ1"/>
                                 <constraint firstItem="D1C-8s-tPP" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="40" id="JBl-Oe-bk3"/>
                                 <constraint firstAttribute="trailing" secondItem="Azo-7T-DFW" secondAttribute="trailing" constant="40" id="KFI-Av-Xcb"/>
