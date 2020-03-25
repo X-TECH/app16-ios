@@ -27,7 +27,6 @@ class DatePickerViewController: UIViewController {
         datePickerView.datePickerMode = .time
        
         datePickerView.locale = Locale(identifier: "hy")
-        
     }
     
     func getData(callback: @escaping (String?) -> ()) {
@@ -46,6 +45,7 @@ class DatePickerViewController: UIViewController {
             selectedDate = String(format: "%02d:%02d", hour, minute)
         }
     }
+    
     @IBAction func okButtonAction(_ sender: UIButton) {
         
         self.dismisView()
