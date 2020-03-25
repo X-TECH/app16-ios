@@ -20,6 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         return true
     }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+           print("APNs token retrieved: \(deviceToken)")
+           
+           let tokenParts = deviceToken.map { data -> String in
+               return String(format: "%02.2hhx", data)
+           }
+           let token = tokenParts.joined()
+           print(token)
+           UserDefaultsHelper.set(alias: .deviceToken, value: token)
+       }
 
     // MARK: UISceneSession Lifecycle
     @available(iOS 13.0, *)

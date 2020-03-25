@@ -11,7 +11,10 @@ import UIKit
 enum UDAliases: String {
     
     case AuthToken = "auth_token"
-    case logined
+    case firstName
+    case lstName
+    case middleName
+    case deviceToken
 }
 
 class UserDefaultsHelper {

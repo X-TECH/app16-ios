@@ -36,6 +36,13 @@ class LoginViewController: UIViewController {
         changeRoot(UINavigationController(rootViewController: controller))
     }
     
+    private func setDatUserDef() {
+        
+        UserDefaultsHelper.set(alias: .firstName, value: firstNameTextField.text)
+        UserDefaultsHelper.set(alias: .lstName, value: lastNameTextFiled.text)
+        UserDefaultsHelper.set(alias: .middleName, value: middleNameTextField.text)
+    }
+    
     // MARK: - Actions
     @IBAction func nextButtonAction(_ sender: Any) {
         
@@ -46,7 +53,10 @@ class LoginViewController: UIViewController {
             let alertController = AlertControllerHelper.showAlert(title: nil, message: "Խնդում ենք լրացրեք բոլոր դաշտերը")
             self.present(alertController, animated: true, completion: nil)
         }else {
+            
+            setDatUserDef()
             openWelcomeController()
+            
         }
     }
 }

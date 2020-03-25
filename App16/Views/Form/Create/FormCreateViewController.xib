@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormCreateViewController" customModule="App16" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="AyJ-6A-jyJ" id="JAO-M0-NOK"/>
                 <outlet property="createButton" destination="NyF-FR-xam" id="UmO-AP-uuM"/>
                 <outlet property="destinationAddressTextField" destination="rPL-7I-ofi" id="TjC-eL-miv"/>
                 <outlet property="destinationTypeTextField" destination="4aW-Ax-Ff0" id="e4d-zH-y4m"/>
@@ -292,11 +293,16 @@
                         <constraint firstItem="Kwt-kc-N2e" firstAttribute="leading" secondItem="9XT-9B-ssX" secondAttribute="leading" id="zKM-S9-Uad"/>
                     </constraints>
                 </scrollView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="AyJ-6A-jyJ">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="9XT-9B-ssX" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="5wS-Yt-kTM"/>
+                <constraint firstItem="AyJ-6A-jyJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RoB-IV-UgI"/>
                 <constraint firstItem="9XT-9B-ssX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YtC-LG-tZZ"/>
+                <constraint firstItem="AyJ-6A-jyJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="aa1-uE-r7f"/>
                 <constraint firstAttribute="bottom" secondItem="9XT-9B-ssX" secondAttribute="bottom" id="tVT-nu-c8g"/>
                 <constraint firstItem="9XT-9B-ssX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yFY-yg-gKn"/>
             </constraints>

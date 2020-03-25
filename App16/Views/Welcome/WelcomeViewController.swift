@@ -20,6 +20,11 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         setRightBarButton()
+        
+        let firstName = UserDefaultsHelper.getString(for: .firstName)
+        let lastName = UserDefaultsHelper.getString(for: .lstName)
+        
+        nameLabel.text = (firstName ?? "-") + " " + (lastName ?? "-")
     }
     
     private func setRightBarButton() {
