@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class QrViewController: UIViewController {
     
@@ -31,13 +32,12 @@ class QrViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func formButtonAction(_ sender: UIButton) {
-        
         openCreateFormView()
     }
     
     @IBAction func finshButtonAction(_ sender: UIButton) {
+         retriveCurentForm()
         
-        openWelcomeView()
     }
     
     private func openWelcomeView() {
@@ -68,4 +68,25 @@ class QrViewController: UIViewController {
             }
         }
     }
+    
+    private func retriveCurentForm() {
+          
+        let form = CurentFormRequestForm(deviceToken: UIDevice.current.identifierForVendor?.uuidString)
+        FormFinishService.shered.finishForm(data: form) { (responseData) in
+              switch responseData {
+              case .base(response: let baseResposne):
+                CheckBaseHelper.checkBaseResponse(baseResposne, viewController: self)
+              case .success(_):
+                
+                self.openWelcomeView()
+              case .isOffline:
+                
+                return
+              case .conflict:
+                
+                
+                  return
+              }
+          }
+      }
 }

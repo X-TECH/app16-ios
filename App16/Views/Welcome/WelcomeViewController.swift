@@ -53,6 +53,7 @@ class WelcomeViewController: UIViewController {
     @IBAction func historyButtonAction(_ sender: UIButton) {
         
         let controller = FormListViewController()
+        self.navigationController?.navigationBar.topItem?.title = " "
         self.navigationController?.pushViewController(controller, animated: true)
         
     }

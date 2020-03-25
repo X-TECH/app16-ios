@@ -308,10 +308,10 @@
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="Kwt-kc-N2e" secondAttribute="bottom" id="IwO-SM-oBm"/>
+                        <constraint firstItem="Kwt-kc-N2e" firstAttribute="width" secondItem="9XT-9B-ssX" secondAttribute="width" id="EiE-Fg-haM"/>
+                        <constraint firstAttribute="bottom" secondItem="Kwt-kc-N2e" secondAttribute="bottom" constant="254" id="IwO-SM-oBm"/>
                         <constraint firstAttribute="trailing" secondItem="Kwt-kc-N2e" secondAttribute="trailing" id="Xh8-mZ-LxV"/>
                         <constraint firstItem="Kwt-kc-N2e" firstAttribute="top" secondItem="9XT-9B-ssX" secondAttribute="top" id="nhk-wF-mqS"/>
-                        <constraint firstItem="Kwt-kc-N2e" firstAttribute="width" secondItem="9XT-9B-ssX" secondAttribute="width" multiplier="0.57971" constant="174" id="yJv-lz-6Li"/>
                         <constraint firstItem="Kwt-kc-N2e" firstAttribute="leading" secondItem="9XT-9B-ssX" secondAttribute="leading" id="zKM-S9-Uad"/>
                     </constraints>
                 </scrollView>
@@ -321,7 +321,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="9XT-9B-ssX" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="5wS-Yt-kTM"/>
+                <constraint firstItem="9XT-9B-ssX" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="5wS-Yt-kTM"/>
                 <constraint firstItem="AyJ-6A-jyJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RoB-IV-UgI"/>
                 <constraint firstItem="9XT-9B-ssX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YtC-LG-tZZ"/>
                 <constraint firstItem="AyJ-6A-jyJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="aa1-uE-r7f"/>

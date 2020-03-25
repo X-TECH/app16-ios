@@ -34,7 +34,9 @@ class FormCreateViewController: UIViewController {
         
         if isCreateMode {
             createButton.isHidden = false
+            self.title = "Ավելացնել ձևաթուղթ"
         }else {
+            self.title = "Ձևաթուղթ"
             createButton.isHidden = true
             retriveCurentForm()
         }
@@ -130,8 +132,8 @@ class FormCreateViewController: UIViewController {
           
           let form = CurentFormRequestForm(deviceToken: UIDevice.current.identifierForVendor?.uuidString)
           
-          CurrentFormService.shered.retrive(data: form) { (weaterResponseData) in
-              switch weaterResponseData {
+          CurrentFormService.shered.retrive(data: form) { (responseData) in
+              switch responseData {
               case .base(response: let baseResposne):
                   CheckBaseHelper.checkBaseResponse(baseResposne, viewController: self)
               case .success(let response):
