@@ -15,7 +15,7 @@ class DatePickerViewController: UIViewController {
     @IBOutlet weak var datePickerView: UIDatePicker!
     
     // MARK: - RxVariables
-    var selectedDate: String?
+    var selectedDate = Date().toString(dateFormat: DateFormat.HoursAndSeconds.rawValue)
     
     private var callback: ((String?) -> ())?
     
@@ -47,6 +47,7 @@ class DatePickerViewController: UIViewController {
         }
     }
     @IBAction func okButtonAction(_ sender: UIButton) {
+        
         self.dismisView()
         callback?(selectedDate)
     }
