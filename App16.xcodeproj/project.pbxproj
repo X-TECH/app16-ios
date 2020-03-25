@@ -37,6 +37,8 @@
 		C5D691B0242AC607004268C3 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5D691AE242AC607004268C3 /* WelcomeViewController.xib */; };
 		C5D691B4242AD290004268C3 /* QrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D691B2242AD290004268C3 /* QrViewController.swift */; };
 		C5D691B5242AD290004268C3 /* QrViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5D691B3242AD290004268C3 /* QrViewController.xib */; };
+		C5D691B8242AD62A004268C3 /* FormListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D691B6242AD62A004268C3 /* FormListCell.swift */; };
+		C5D691B9242AD62A004268C3 /* FormListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5D691B7242AD62A004268C3 /* FormListCell.xib */; };
 		DFF30959C2696CFA212F54E4 /* Pods_App16.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC947C811CE3C096F8981C77 /* Pods_App16.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,8 @@
 		C5D691AE242AC607004268C3 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		C5D691B2242AD290004268C3 /* QrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrViewController.swift; sourceTree = "<group>"; };
 		C5D691B3242AD290004268C3 /* QrViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QrViewController.xib; sourceTree = "<group>"; };
+		C5D691B6242AD62A004268C3 /* FormListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormListCell.swift; sourceTree = "<group>"; };
+		C5D691B7242AD62A004268C3 /* FormListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +289,8 @@
 		C5D691A5242AB528004268C3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				C5D691B6242AD62A004268C3 /* FormListCell.swift */,
+				C5D691B7242AD62A004268C3 /* FormListCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 				C5D691B0242AC607004268C3 /* WelcomeViewController.xib in Resources */,
 				C5D69157242AA094004268C3 /* Assets.xcassets in Resources */,
 				C5D69155242AA091004268C3 /* Main.storyboard in Resources */,
+				C5D691B9242AD62A004268C3 /* FormListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +456,7 @@
 				C5D6917B242AA5AA004268C3 /* DateFormat.swift in Sources */,
 				C5D69181242AA5EB004268C3 /* AlertControllerHelper.swift in Sources */,
 				C5D69175242AA55A004268C3 /* BaseState.swift in Sources */,
+				C5D691B8242AD62A004268C3 /* FormListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

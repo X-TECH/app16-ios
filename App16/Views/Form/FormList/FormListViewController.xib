@@ -19,8 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HZb-fy-7lq">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HZb-fy-7lq">
+                    <rect key="frame" x="0.0" y="52" width="414" height="844"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
@@ -29,7 +29,7 @@
                 <constraint firstItem="HZb-fy-7lq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2Ot-Go-5dk"/>
                 <constraint firstItem="HZb-fy-7lq" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="JJa-S3-A8H"/>
                 <constraint firstAttribute="bottom" secondItem="HZb-fy-7lq" secondAttribute="bottom" id="Ma1-TH-OLm"/>
-                <constraint firstItem="HZb-fy-7lq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dLk-Zr-Bbk"/>
+                <constraint firstItem="HZb-fy-7lq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="dLk-Zr-Bbk"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>

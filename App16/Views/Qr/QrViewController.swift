@@ -24,9 +24,23 @@ class QrViewController: UIViewController {
     // MARK: - Actions
     @IBAction func formButtonAction(_ sender: UIButton) {
         
+        openCreateFormView()
     }
     
     @IBAction func finshButtonAction(_ sender: UIButton) {
         
+        openWelcomeView()
+    }
+    
+    private func openWelcomeView() {
+        
+        let controller = WelcomeViewController()
+        changeRoot(UINavigationController(rootViewController: controller))
+    }
+    
+    private func openCreateFormView() {
+        
+        let controller = FormCreateViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }

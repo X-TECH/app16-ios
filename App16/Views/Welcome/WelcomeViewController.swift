@@ -40,11 +40,14 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func createButtonAction(_ sender: UIButton) {
         
-        let createFormView = FormCreateViewController()
-        self.navigationController?.pushViewController(createFormView, animated: true)
+        let controller = FormCreateViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @IBAction func historyButtonAction(_ sender: UIButton) {
+        
+        let controller = FormListViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
         
     }
 }
