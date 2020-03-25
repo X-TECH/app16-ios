@@ -38,6 +38,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.registerForRemoteNotifications()
         application.registerForRemoteNotifications()
         
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0/255, green: 137/255, blue: 40/255, alpha: 1)
+        UINavigationBar.appearance().tintColor = .white
+        
+        UINavigationBar.appearance().isTranslucent = false
+        
         return true
     }
     

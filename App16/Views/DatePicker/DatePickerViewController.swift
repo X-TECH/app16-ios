@@ -27,6 +27,7 @@ class DatePickerViewController: UIViewController {
         datePickerView.datePickerMode = .time
        
         datePickerView.locale = Locale(identifier: "hy")
+        datePickerView.setValue(UIColor.black, forKeyPath: "textColor")
     }
     
     func getData(callback: @escaping (String?) -> ()) {
