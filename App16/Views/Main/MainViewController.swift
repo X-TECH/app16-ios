@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         retriveCurentForm()
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     private func openLoginViewController() {
