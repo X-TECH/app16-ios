@@ -36,6 +36,7 @@ class FormCreateViewController: UIViewController {
     // MARK: - Variables
     var data: FormResponse!
     var formViewType: FormViewType = .creta
+    let date = Date().toString(dateFormat: DateFormat.StandartDate.rawValue)
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -46,6 +47,7 @@ class FormCreateViewController: UIViewController {
             
             createButton.isHidden = false
             self.title = "Ստեղծել ձևաթուղթ"
+            curentDate.text = date
         case .viewFromList:
             
             self.title = "Ձևաթուղթ"
@@ -57,9 +59,6 @@ class FormCreateViewController: UIViewController {
             createButton.isHidden = true
             retriveCurentForm()
         }
-        
-        let date = Date().toString(dateFormat: DateFormat.StandartDate.rawValue)
-        curentDate.text = date
     }
     
     // MARK: - Actions
@@ -201,5 +200,6 @@ class FormCreateViewController: UIViewController {
         destinationAddressTextField.text = response?.visitingAddressAndName
         planneDateTimeTextField.text = response?.plannedReturnDatetime
         destinationTypeTextField.text = response?.visitingReason
+        curentDate.text = response?.createdAt
     }
 }
