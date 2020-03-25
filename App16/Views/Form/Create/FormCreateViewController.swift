@@ -6,41 +6,63 @@
 //  Copyright © 2020 X-TECH. All rights reserved.
 //
 
+enum FormViewType {
+    
+    case viewFromList
+    case viewFromQr
+    case creta
+}
+
 import UIKit
 import IQKeyboardManagerSwift
+
 
 class FormCreateViewController: UIViewController {
     
     // MARK: - IBOutlets
+    @IBOutlet weak var curentDate: UILabel!
     @IBOutlet weak var outDateTimeTextFiled: UITextField!
     @IBOutlet weak var outAddressTextFiled: UITextField!
     @IBOutlet weak var destinationAddressTextField: UITextField!
     @IBOutlet weak var planneDateTimeTextField: UITextField!
     
-    @IBOutlet weak var destinationTypeTextField:
-    UITextField!
-    
+    @IBOutlet weak var destinationTypeTextField: UITextField!
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var outDateButtonAction: UIButton!
     @IBOutlet weak var planneDateTimeButton: UIButton!
     
-    var isCreateMode = false
-   
+    // MARK: - Variables
+    var data: FormResponse!
+    var formViewType: FormViewType = .creta
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if isCreateMode {
+        switch formViewType {
+        case .creta:
+            
             createButton.isHidden = false
-            self.title = "Ավելացնել ձևաթուղթ"
-        }else {
+            self.title = "Ստեղծել ձևաթուղթ"
+        case .viewFromList:
+            
+            self.title = "Ձևաթուղթ"
+            createButton.isHidden = true
+            setData(response: data)
+        case .viewFromQr:
+            
             self.title = "Ձևաթուղթ"
             createButton.isHidden = true
             retriveCurentForm()
         }
+        
+        let date = Date().toString(dateFormat: DateFormat.StandartDate.rawValue)
+        curentDate.text = date
     }
+    
+    // MARK: - Actions
     @IBAction func outDateButtonAction(_ sender: UIButton) {
         
         let vc = DatePickerViewController()
@@ -129,31 +151,37 @@ class FormCreateViewController: UIViewController {
     }
     
     private func retriveCurentForm() {
-          
-          let form = CurentFormRequestForm(deviceToken: UIDevice.current.identifierForVendor?.uuidString)
-          
-          CurrentFormService.shered.retrive(data: form) { (responseData) in
-              switch responseData {
-              case .base(response: let baseResposne):
-                  CheckBaseHelper.checkBaseResponse(baseResposne, viewController: self)
-              case .success(let response):
+        
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        
+        let form = CurentFormRequestForm(deviceToken: UIDevice.current.identifierForVendor?.uuidString)
+        
+        CurrentFormService.shered.retrive(data: form) { (responseData) in
+            switch responseData {
+            case .base(response: let baseResposne):
                 
+                self.activityIndicator.stopAnimating()
+                CheckBaseHelper.checkBaseResponse(baseResposne, viewController: self)
+            case .success(let response):
+                
+                self.activityIndicator.stopAnimating()
                 DispatchQueue.main.async {
-                    self.setData(response: response)
+                    self.setData(response: response.data )
                 }
+            case .isOffline:
                 
-              case .isOffline:
-                  
-                  return
-              case .conflict:
-    
+                self.activityIndicator.stopAnimating()
+                return
+            case .conflict:
                 
-                  return
-              }
-          }
-      }
+                self.activityIndicator.stopAnimating()
+                return
+            }
+        }
+    }
     
-    private func setData(response: FormCreateResponse) {
+    private func setData(response: FormResponse?) {
         
         destinationAddressTextField.isUserInteractionEnabled = false
         planneDateTimeTextField.isUserInteractionEnabled = false
@@ -162,15 +190,16 @@ class FormCreateViewController: UIViewController {
         
         outDateButtonAction.isUserInteractionEnabled = false
         planneDateTimeButton.isUserInteractionEnabled = false
+        outAddressTextFiled.isUserInteractionEnabled = false
         
         outDateTimeTextFiled.isUserInteractionEnabled = false
         planneDateTimeTextField.isUserInteractionEnabled = false
         
-        outDateTimeTextFiled.text = response.data?.outDatetime
-        outAddressTextFiled.text = response.data?.outAddress
+        outDateTimeTextFiled.text = response?.outDatetime
+        outAddressTextFiled.text = response?.outAddress
         
-        destinationAddressTextField.text = response.data?.visitingAddressAndName
-        planneDateTimeTextField.text = response.data?.plannedReturnDatetime
-        destinationTypeTextField.text = response.data?.visitingReason
+        destinationAddressTextField.text = response?.visitingAddressAndName
+        planneDateTimeTextField.text = response?.plannedReturnDatetime
+        destinationTypeTextField.text = response?.visitingReason
     }
 }

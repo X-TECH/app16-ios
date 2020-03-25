@@ -15,7 +15,7 @@ class DatePickerViewController: UIViewController {
     @IBOutlet weak var datePickerView: UIDatePicker!
     
     // MARK: - RxVariables
-    var selectedDate: String?
+    var selectedDate = Date().toString(dateFormat: DateFormat.HoursAndSeconds.rawValue)
     
     private var callback: ((String?) -> ())?
     
@@ -27,7 +27,7 @@ class DatePickerViewController: UIViewController {
         datePickerView.datePickerMode = .time
        
         datePickerView.locale = Locale(identifier: "hy")
-        
+        datePickerView.setValue(UIColor.black, forKeyPath: "textColor")
     }
     
     func getData(callback: @escaping (String?) -> ()) {
@@ -46,7 +46,9 @@ class DatePickerViewController: UIViewController {
             selectedDate = String(format: "%02d:%02d", hour, minute)
         }
     }
+    
     @IBAction func okButtonAction(_ sender: UIButton) {
+        
         self.dismisView()
         callback?(selectedDate)
     }

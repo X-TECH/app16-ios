@@ -46,7 +46,8 @@ class WelcomeViewController: UIViewController {
     @IBAction func createButtonAction(_ sender: UIButton) {
         
         let controller = FormCreateViewController()
-        controller.isCreateMode = true
+        controller.formViewType = .creta
+        self.navigationController?.navigationBar.topItem?.title = " "
         self.navigationController?.pushViewController(controller, animated: true)
     }
     

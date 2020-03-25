@@ -17,7 +17,7 @@ class CheckBaseHelper {
             let alert = AlertControllerHelper.showAlert(title: "Bed request", message: nil)
             viewController.present(alert, animated: true, completion: nil)
         case .validationProblem(error: let error):
-            let alert = AlertControllerHelper.showAlert(title: "Սխալ", message: nil)
+            let alert = AlertControllerHelper.showAlert(title: error.title, message: error.invalidParams.first?.messages?.first)
             viewController.present(alert, animated: true, completion: nil)
         case .unauthorized:
             let alert = AlertControllerHelper.showAlert(title: "Invalid credentials", message: nil)

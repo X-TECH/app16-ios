@@ -15,11 +15,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var middleNameTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
-
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        firstNameTextField.attributedPlaceholder = NSAttributedString(string: "Անուն",
+                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.2)])
+        lastNameTextFiled.attributedPlaceholder = NSAttributedString(string: "Ազգանուն",
+                                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.2)])
+        middleNameTextField.attributedPlaceholder = NSAttributedString(string: "Հայրանուն",
+                                                                       attributes: [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.2)])
     }
     
     // MARK: - Navigation

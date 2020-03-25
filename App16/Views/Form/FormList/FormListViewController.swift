@@ -12,6 +12,7 @@ class FormListViewController: UIViewController {
 
     // MARK: - IBOutlet
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Varibales
     private let formListCell = "FormListCell"
@@ -25,6 +26,7 @@ class FormListViewController: UIViewController {
         tableView.dataSource = self
         
         registerCelll()
+        self.title = "Պատմություն"
         
         if let deviceId = UIDevice.current.identifierForVendor?.uuidString {
             retriveCurentForm(deviceToken: deviceId)
@@ -40,23 +42,27 @@ class FormListViewController: UIViewController {
     
     private func retriveCurentForm(deviceToken: String) {
         
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        
         let form = CurentFormRequestForm(deviceToken: UIDevice.current.identifierForVendor?.uuidString)
         
         FormsService.shered.retriveForms(data: form) { (responseData) in
             switch responseData {
             case .base(response: let baseResposne):
-                
+                self.activityIndicator.stopAnimating()
                 CheckBaseHelper.checkBaseResponse(baseResposne, viewController: self)
             case .success(let response):
+                self.activityIndicator.stopAnimating()
                 self.dataSource = response.data ?? []
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
             case .isOffline:
-                //self.activityIndicator.stopAnimating()
+                self.activityIndicator.stopAnimating()
                 return
             case .conflict:
-                //self.activityIndicator.stopAnimating()
+                self.activityIndicator.stopAnimating()
                 return
             }
         }
@@ -85,15 +91,14 @@ extension FormListViewController: UITableViewDataSource {
 extension FormListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        openCreateFormView()
-        print(indexPath.row)
+        openCreateFormView(index: indexPath.row)
     }
     
-    private func openCreateFormView() {
+    private func openCreateFormView(index: Int) {
         
         let controller = FormCreateViewController()
-        controller.isCreateMode = false
+        controller.formViewType = .viewFromList
+        controller.data = dataSource[index]
         self.navigationController?.navigationBar.topItem?.title = " "
         self.navigationController?.pushViewController(controller, animated: true)
     }

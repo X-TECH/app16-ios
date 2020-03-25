@@ -10,10 +10,11 @@ import Foundation
 import ObjectMapper
 
 class ValidationError: Mappable {
+    
     var type: String = ""
     var title: String = ""
     var detail: String = ""
-    var invalidParams: [InvalidParam] = []
+    var invalidParams: [ValidationErrorFields] = []
     
     required init?(map: Map) {
         
@@ -21,9 +22,26 @@ class ValidationError: Mappable {
     
     func mapping(map: Map) {
         type <- map["type"]
-        title <- map["title"]
+        title <- map["error.message"]
         detail <- map["detail"]
-        invalidParams <- map["invalidParams"]
+        invalidParams <- map["error.fields"]
+    }
+    
+}
+
+class ValidationErrorFields: Mappable {
+    
+    var key: String?
+    var messages: [String]?
+
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        
+        key <- map["key"]
+        messages <- map["messages"]
     }
     
 }
