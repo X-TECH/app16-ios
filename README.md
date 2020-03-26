@@ -11,7 +11,7 @@
 
 Այս պահին ցանկացած անձ կարող է ներբեռնել հավելվածը, փորձարկել, անհրաժեշտության դեպքում կատարել առաջարկներ և դիտողություններ:
 
-Ցանկացողները կարող են մասնակցել զարգացմանը՝ Pull request-ներ ուղարկելով GitHub-ի այս Repository-ին՝ [https://github.com/X-TECH/app16-backend](https://github.com/X-TECH/app16-backend)
+Ցանկացողները կարող են մասնակցել զարգացմանը՝ Pull request-ներ ուղարկելով GitHub-ի այս Repository-ին՝ [https://github.com/X-TECH/app16-ios](https://github.com/X-TECH/app16-ios)
 
 ## Նախագծի մշակման մասնակիցներ՝
 
