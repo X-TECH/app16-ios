@@ -32,6 +32,7 @@ class FormCreateViewController: UIViewController {
     
     @IBOutlet weak var outDateButtonAction: UIButton!
     @IBOutlet weak var planneDateTimeButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
     
     // MARK: - Variables
     var data: FormResponse!
@@ -58,6 +59,12 @@ class FormCreateViewController: UIViewController {
             self.title = "Ձևաթուղթ"
             createButton.isHidden = true
             retriveCurentForm()
+        }
+        
+        if let firstName = UserDefaultsHelper.getString(for: .firstName),
+            let lastName = UserDefaultsHelper.getString(for: .lstName),
+            let middleName = UserDefaultsHelper.getString(for: .middleName) {
+            nameLabel.text = "\(firstName) \(lastName) \(middleName)"
         }
     }
     
