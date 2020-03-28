@@ -15,6 +15,7 @@
                 <outlet property="curentDate" destination="Tq2-Oq-lxj" id="Fh8-Zh-rwo"/>
                 <outlet property="destinationAddressTextField" destination="rPL-7I-ofi" id="TjC-eL-miv"/>
                 <outlet property="destinationTypeTextField" destination="4aW-Ax-Ff0" id="e4d-zH-y4m"/>
+                <outlet property="nameLabel" destination="MpC-Y1-VSJ" id="VF0-A0-eq8"/>
                 <outlet property="outAddressTextFiled" destination="mYS-bW-6ay" id="cWv-wV-KGV"/>
                 <outlet property="outDateButtonAction" destination="PvO-en-2tn" id="jZ5-9P-rNL"/>
                 <outlet property="outDateTimeTextFiled" destination="1V6-3e-Iop" id="udW-wX-Bcq"/>
@@ -32,10 +33,16 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kwt-kc-N2e">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="650"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="692.5"/>
                             <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.41999998688697815" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- -" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq2-Oq-lxj">
+                                    <rect key="frame" x="41" y="52.5" width="333" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azo-7T-DFW" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
-                                    <rect key="frame" x="40" y="59" width="334" height="50"/>
+                                    <rect key="frame" x="40" y="106.5" width="334" height="50"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0QW-Kv-2ER">
                                             <rect key="frame" x="0.0" y="48" width="334" height="2"/>
@@ -79,13 +86,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ելքի ժամ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syB-Qv-Joh">
-                                    <rect key="frame" x="62" y="33" width="312" height="18"/>
+                                    <rect key="frame" x="62" y="80.5" width="312" height="18"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D1C-8s-tPP" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
-                                    <rect key="frame" x="40" y="161" width="334" height="50"/>
+                                    <rect key="frame" x="40" y="208.5" width="334" height="50"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czj-oJ-tjQ">
                                             <rect key="frame" x="0.0" y="48" width="334" height="2"/>
@@ -119,13 +126,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ելքի հասցե" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQ1-bo-hyi">
-                                    <rect key="frame" x="62" y="134" width="312" height="18"/>
+                                    <rect key="frame" x="62" y="181.5" width="312" height="18"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JD7-Yf-hQj" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
-                                    <rect key="frame" x="40" y="363" width="334" height="50"/>
+                                    <rect key="frame" x="40" y="410.5" width="334" height="50"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Yo-z8-oAH">
                                             <rect key="frame" x="0.0" y="48" width="334" height="2"/>
@@ -159,13 +166,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Այցելության վայրի հասցե/անվանում" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rli-qI-mfE">
-                                    <rect key="frame" x="62" y="337" width="312" height="18"/>
+                                    <rect key="frame" x="62" y="384.5" width="312" height="18"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyF-FR-xam">
-                                    <rect key="frame" x="40" y="555" width="334" height="50"/>
+                                    <rect key="frame" x="40" y="602.5" width="334" height="50"/>
                                     <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="woG-qF-djV"/>
@@ -184,7 +191,7 @@
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z4k-Ps-PAB" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
-                                    <rect key="frame" x="40" y="262" width="334" height="50"/>
+                                    <rect key="frame" x="40" y="309.5" width="334" height="50"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lme-Mg-B1h">
                                             <rect key="frame" x="0.0" y="48" width="334" height="2"/>
@@ -228,19 +235,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Վերադարձի ակնկալվող ժամը" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XIU-P6-Fzz">
-                                    <rect key="frame" x="56" y="236" width="318" height="18"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.41999998688697815" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- -" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq2-Oq-lxj">
-                                    <rect key="frame" x="41" y="8" width="333" height="18"/>
+                                    <rect key="frame" x="56" y="283.5" width="318" height="18"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8h-Y5-do2" customClass="IQPreviousNextView" customModule="IQKeyboardManagerSwift">
-                                    <rect key="frame" x="40" y="464" width="334" height="50"/>
+                                    <rect key="frame" x="40" y="511.5" width="334" height="50"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lo6-I6-IUF">
                                             <rect key="frame" x="0.0" y="48" width="334" height="2"/>
@@ -274,8 +275,14 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Այցելության նպատակը" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANA-an-vnP">
-                                    <rect key="frame" x="59" y="438" width="315" height="18"/>
+                                    <rect key="frame" x="59" y="485.5" width="315" height="18"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpC-Y1-VSJ">
+                                    <rect key="frame" x="40" y="16" width="334" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -284,21 +291,23 @@
                             <constraints>
                                 <constraint firstItem="JQ1-bo-hyi" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="62" id="15A-Iv-cCm"/>
                                 <constraint firstItem="XIU-P6-Fzz" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="56" id="1PE-h2-asn"/>
+                                <constraint firstItem="MpC-Y1-VSJ" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="40" id="4nl-M4-8kx"/>
                                 <constraint firstItem="A8h-Y5-do2" firstAttribute="top" secondItem="ANA-an-vnP" secondAttribute="bottom" constant="8" id="5ps-r4-b3y"/>
                                 <constraint firstItem="z4k-Ps-PAB" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="40" id="662-y4-PqE"/>
                                 <constraint firstItem="Azo-7T-DFW" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="40" id="6dp-lT-DXC"/>
                                 <constraint firstItem="JD7-Yf-hQj" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="40" id="882-E8-fUZ"/>
+                                <constraint firstAttribute="trailing" secondItem="MpC-Y1-VSJ" secondAttribute="trailing" constant="40" id="BRx-FI-GQa"/>
                                 <constraint firstAttribute="trailing" secondItem="z4k-Ps-PAB" secondAttribute="trailing" constant="40" id="D8U-eB-283"/>
                                 <constraint firstAttribute="trailing" secondItem="NyF-FR-xam" secondAttribute="trailing" constant="40" id="De8-qX-Ukc"/>
                                 <constraint firstAttribute="trailing" secondItem="JD7-Yf-hQj" secondAttribute="trailing" constant="40" id="DlW-PC-fOe"/>
                                 <constraint firstItem="NyF-FR-xam" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="40" id="FI1-KC-yTn"/>
-                                <constraint firstAttribute="bottom" secondItem="NyF-FR-xam" secondAttribute="bottom" constant="45" id="FW4-Nj-AYg"/>
+                                <constraint firstAttribute="bottom" secondItem="NyF-FR-xam" secondAttribute="bottom" constant="40" id="FW4-Nj-AYg"/>
                                 <constraint firstAttribute="trailing" secondItem="XIU-P6-Fzz" secondAttribute="trailing" constant="40" id="GAa-mM-fJ1"/>
                                 <constraint firstItem="D1C-8s-tPP" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="40" id="JBl-Oe-bk3"/>
                                 <constraint firstAttribute="trailing" secondItem="Azo-7T-DFW" secondAttribute="trailing" constant="40" id="KFI-Av-Xcb"/>
                                 <constraint firstItem="ANA-an-vnP" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="59" id="Lr1-rN-h2l"/>
-                                <constraint firstAttribute="trailing" secondItem="Tq2-Oq-lxj" secondAttribute="trailing" constant="40" id="MNa-c2-xVY"/>
                                 <constraint firstItem="XIU-P6-Fzz" firstAttribute="top" secondItem="D1C-8s-tPP" secondAttribute="bottom" constant="25" id="MeZ-6w-tlZ"/>
+                                <constraint firstItem="MpC-Y1-VSJ" firstAttribute="top" secondItem="Kwt-kc-N2e" secondAttribute="top" constant="16" id="Nq6-Wc-7fn"/>
                                 <constraint firstItem="z4k-Ps-PAB" firstAttribute="top" secondItem="XIU-P6-Fzz" secondAttribute="bottom" constant="8" id="PIF-g3-S5E"/>
                                 <constraint firstItem="rli-qI-mfE" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="62" id="QGd-Gc-Ykp"/>
                                 <constraint firstItem="D1C-8s-tPP" firstAttribute="top" secondItem="JQ1-bo-hyi" secondAttribute="bottom" constant="9" id="Qqc-yH-DR9"/>
@@ -307,18 +316,19 @@
                                 <constraint firstItem="rli-qI-mfE" firstAttribute="top" secondItem="z4k-Ps-PAB" secondAttribute="bottom" constant="25" id="Tdp-jd-Jop"/>
                                 <constraint firstAttribute="trailing" secondItem="A8h-Y5-do2" secondAttribute="trailing" constant="40" id="WfL-zu-8YV"/>
                                 <constraint firstItem="syB-Qv-Joh" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="62" id="XJj-pN-gg6"/>
+                                <constraint firstItem="Tq2-Oq-lxj" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="41" id="YIc-LZ-z28"/>
+                                <constraint firstItem="syB-Qv-Joh" firstAttribute="top" secondItem="Tq2-Oq-lxj" secondAttribute="bottom" constant="10" id="Zsq-bT-D1k"/>
                                 <constraint firstItem="JD7-Yf-hQj" firstAttribute="top" secondItem="rli-qI-mfE" secondAttribute="bottom" constant="8" id="al4-vL-QZu"/>
                                 <constraint firstAttribute="trailing" secondItem="rli-qI-mfE" secondAttribute="trailing" constant="40" id="cPv-Ki-kP3"/>
-                                <constraint firstItem="Tq2-Oq-lxj" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="41" id="exd-Af-Wo5"/>
                                 <constraint firstItem="Azo-7T-DFW" firstAttribute="top" secondItem="syB-Qv-Joh" secondAttribute="bottom" constant="8" id="jGQ-Lj-r4b"/>
                                 <constraint firstItem="ANA-an-vnP" firstAttribute="top" secondItem="JD7-Yf-hQj" secondAttribute="bottom" constant="25" id="juh-hB-Xei"/>
-                                <constraint firstItem="Tq2-Oq-lxj" firstAttribute="top" secondItem="Kwt-kc-N2e" secondAttribute="top" constant="8" id="nSE-Ou-R2k"/>
-                                <constraint firstItem="syB-Qv-Joh" firstAttribute="top" secondItem="Tq2-Oq-lxj" secondAttribute="bottom" constant="7" id="rr8-7z-gj0"/>
                                 <constraint firstAttribute="trailing" secondItem="D1C-8s-tPP" secondAttribute="trailing" constant="40" id="sZh-VY-bx5"/>
+                                <constraint firstItem="Tq2-Oq-lxj" firstAttribute="top" secondItem="MpC-Y1-VSJ" secondAttribute="bottom" constant="16" id="sdf-ns-DbG"/>
                                 <constraint firstAttribute="trailing" secondItem="ANA-an-vnP" secondAttribute="trailing" constant="40" id="wxF-Tk-cei"/>
                                 <constraint firstItem="NyF-FR-xam" firstAttribute="top" secondItem="A8h-Y5-do2" secondAttribute="bottom" constant="41" id="xVC-H7-cgb"/>
                                 <constraint firstItem="A8h-Y5-do2" firstAttribute="leading" secondItem="Kwt-kc-N2e" secondAttribute="leading" constant="40" id="xcw-Jg-bGz"/>
                                 <constraint firstItem="JQ1-bo-hyi" firstAttribute="top" secondItem="Azo-7T-DFW" secondAttribute="bottom" constant="25" id="xnQ-Ac-hSO"/>
+                                <constraint firstAttribute="trailing" secondItem="Tq2-Oq-lxj" secondAttribute="trailing" constant="40" id="zTy-YH-yl8"/>
                             </constraints>
                         </view>
                     </subviews>
