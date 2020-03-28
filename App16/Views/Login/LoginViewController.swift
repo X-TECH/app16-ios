@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         setRightBarButton()
+        self.title = "App16"
     }
     
     override func viewWillAppear(_ animated: Bool) {
