@@ -13,7 +13,11 @@ target 'App16' do
     pod 'AlamofireObjectMapper', '~> 5.2'
     pod 'AlamofireImage', '~> 3.5'
     pod 'IQKeyboardManagerSwift'
-
-  # Pods for App16
+    pod 'Localize-Swift', '~> 2.0'
+    pod 'RxSwift', '~> 5'
+    pod 'RxRelay', '~> 5'
+    pod 'RxCocoa', '~> 5'
+    
+    # Pods for App16
 
 end

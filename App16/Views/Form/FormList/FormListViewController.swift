@@ -26,7 +26,7 @@ class FormListViewController: UIViewController {
         tableView.dataSource = self
         
         registerCelll()
-        self.title = "Պատմություն"
+        self.title = "HISTORY".localized()
         
         if let deviceId = UIDevice.current.identifierForVendor?.uuidString {
             retriveCurentForm(deviceToken: deviceId)

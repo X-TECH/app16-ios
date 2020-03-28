@@ -6,13 +6,24 @@ PODS:
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
   - IQKeyboardManagerSwift (6.5.5)
+  - Localize-Swift (2.0.0)
   - ObjectMapper (3.5.1)
+  - RxCocoa (5.0.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.3)
   - AlamofireImage (~> 3.5)
   - AlamofireObjectMapper (~> 5.2)
   - IQKeyboardManagerSwift
+  - Localize-Swift (~> 2.0)
+  - RxCocoa (~> 5)
+  - RxRelay (~> 5)
+  - RxSwift (~> 5)
 
 SPEC REPOS:
   trunk:
@@ -20,15 +31,23 @@ SPEC REPOS:
     - AlamofireImage
     - AlamofireObjectMapper
     - IQKeyboardManagerSwift
+    - Localize-Swift
     - ObjectMapper
+    - RxCocoa
+    - RxRelay
+    - RxSwift
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlamofireImage: be9963c6582d68b39e89191f64c82a7d7bf40fdd
   AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
+  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
 
-PODFILE CHECKSUM: f7b2a4acba9f80a5f15cdb5a8f564ca06e0d8677
+PODFILE CHECKSUM: 4cab2393bcb24f88355b10a74c59e2e6d5d89bfb
 
 COCOAPODS: 1.8.4

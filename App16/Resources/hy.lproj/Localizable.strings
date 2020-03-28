@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  App16
+
+  Created by Grigor Aghabalyan on 3/28/20.
+  Copyright © 2020 X-TECH. All rights reserved.
+*/
+
+"FIRST_NAME" = "Անուն";
+"LAST_NAME" = "Ազգանուն";
+"MIDDLE_NAME" = "հայրանուն";
+"NEXT" = "Հաջորդը";
+
+"WELCOME" = "Բարի գալուստ";
+"HISTORY" = "Պատմություն";
+"CREATE_FORM" = "Ստեղծել ձևաթուղթ";
+"CREATE" = "Ստեղծել";
+
+"FOMR" = "Ձևաթուղթ";
+"FINISH" = "Ավարտել";
+
+"OUT_ADDRESS" = "Ելքի ժամ";
+"OUT_DATETIME" = "Ելքի հասցե";
+"Estimated Return Time" = "Վերադարձի ակնկալվող ժամը";
+"Address of the place of visit/title" = "Այցելության վայրի հասցե/անվանում";
+"Purpose of the visit" = "Այցելության նպատակը";
+
+"APP_VERSION" = "Հավելվածի տարբերակ";
+"SETTINGS" = "Կարգավորումներ";
+"LANGUAGE" = "Լեզու";
+"LANGUAGES" = "Լեզուներ";
+"CANCEL" = "Չեղարկել";

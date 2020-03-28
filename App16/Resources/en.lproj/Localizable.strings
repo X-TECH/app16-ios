@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  App16
+
+  Created by Grigor Aghabalyan on 3/28/20.
+  Copyright © 2020 X-TECH. All rights reserved.
+*/
+
+"FIRST_NAME" = "Fist name";
+"LAST_NAME" = "Last name";
+"MIDDLE_NAME" = "Middle name";
+"NEXT" = "Next";
+
+"WELCOME" = "Welcome";
+"HISTORY" = "History";
+"CREATE_FORM" = "Create Form";
+"CREATE" = "Create";
+
+"FORM" = "Form";
+"FINISH" = "Finish";
+
+"OUT_ADDRESS" = "Out address";
+"OUT_DATETIME" = "Out datetime";
+"Estimated Return Time" = "Estimated Return Time";
+"Address of the place of visit/Title" = "Address of the place of visit/Title";
+"Purpose of the visit" = "Purpose of the visit";
+
+"APP_VERSION" = "App version";
+"SETTINGS" = "Settings";
+"LANGUAGE" = "Language";
+"LANGUAGES" = "Languages";
+"CANCEL" = "Cancel";

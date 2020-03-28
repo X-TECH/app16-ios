@@ -15,6 +15,8 @@ enum UDAliases: String {
     case lstName
     case middleName
     case deviceToken
+    case locale = "hy"
+    case langauge = "Հայերեն"
 }
 
 class UserDefaultsHelper {

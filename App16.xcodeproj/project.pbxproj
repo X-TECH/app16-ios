@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C5356A2C242FA06000EFD310 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C5356A2E242FA06000EFD310 /* Localizable.strings */; };
+		C5356A34242FBAF800EFD310 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5356A32242FBAF800EFD310 /* SettingsViewController.swift */; };
+		C5356A35242FBAF800EFD310 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5356A33242FBAF800EFD310 /* SettingsViewController.xib */; };
+		C5356A39242FC1F900EFD310 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5356A37242FC1F900EFD310 /* LanguageViewController.swift */; };
+		C5356A3A242FC1F900EFD310 /* LanguageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5356A38242FC1F900EFD310 /* LanguageViewController.xib */; };
+		C5356A3D242FC9F900EFD310 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5356A3C242FC9F900EFD310 /* Language.swift */; };
+		C5356A41242FCB4700EFD310 /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5356A3F242FCB4600EFD310 /* LanguageCell.swift */; };
+		C5356A42242FCB4700EFD310 /* LanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5356A40242FCB4600EFD310 /* LanguageCell.xib */; };
 		C5D2A725242B077100825031 /* FormsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D2A724242B077100825031 /* FormsService.swift */; };
 		C5D2A727242B0A2300825031 /* FormsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D2A726242B0A2300825031 /* FormsResponse.swift */; };
 		C5D2A729242B12F200825031 /* FormResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D2A728242B12F200825031 /* FormResponse.swift */; };
@@ -55,6 +63,20 @@
 		57DE28D9ACEB4E61AAE67E58 /* Pods-App16.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App16.debug.xcconfig"; path = "Target Support Files/Pods-App16/Pods-App16.debug.xcconfig"; sourceTree = "<group>"; };
 		AC947C811CE3C096F8981C77 /* Pods_App16.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App16.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4BB414838A78D615C7E656 /* Pods-App16.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App16.release.xcconfig"; path = "Target Support Files/Pods-App16/Pods-App16.release.xcconfig"; sourceTree = "<group>"; };
+		C5356A28242FA03000EFD310 /* hy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hy; path = hy.lproj/Main.strings; sourceTree = "<group>"; };
+		C5356A29242FA03000EFD310 /* hy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hy; path = hy.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C5356A2A242FA05100EFD310 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		C5356A2B242FA05100EFD310 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C5356A2D242FA06000EFD310 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C5356A2F242FA06D00EFD310 /* hy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hy; path = hy.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C5356A30242FA07000EFD310 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C5356A32242FBAF800EFD310 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C5356A33242FBAF800EFD310 /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		C5356A37242FC1F900EFD310 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		C5356A38242FC1F900EFD310 /* LanguageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageViewController.xib; sourceTree = "<group>"; };
+		C5356A3C242FC9F900EFD310 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		C5356A3F242FCB4600EFD310 /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
+		C5356A40242FCB4600EFD310 /* LanguageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageCell.xib; sourceTree = "<group>"; };
 		C5D2A724242B077100825031 /* FormsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsService.swift; sourceTree = "<group>"; };
 		C5D2A726242B0A2300825031 /* FormsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsResponse.swift; sourceTree = "<group>"; };
 		C5D2A728242B12F200825031 /* FormResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormResponse.swift; sourceTree = "<group>"; };
@@ -129,6 +151,51 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C5356A23242F9ED300EFD310 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C5356A2E242FA06000EFD310 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C5356A31242FBADB00EFD310 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C5356A32242FBAF800EFD310 /* SettingsViewController.swift */,
+				C5356A33242FBAF800EFD310 /* SettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C5356A36242FC1E600EFD310 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				C5356A3E242FCB3000EFD310 /* Cells */,
+				C5356A3B242FC9E700EFD310 /* Models */,
+				C5356A37242FC1F900EFD310 /* LanguageViewController.swift */,
+				C5356A38242FC1F900EFD310 /* LanguageViewController.xib */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		C5356A3B242FC9E700EFD310 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C5356A3C242FC9F900EFD310 /* Language.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C5356A3E242FCB3000EFD310 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C5356A3F242FCB4600EFD310 /* LanguageCell.swift */,
+				C5356A40242FCB4600EFD310 /* LanguageCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C5D69141242AA091004268C3 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +217,7 @@
 		C5D6914C242AA091004268C3 /* App16 */ = {
 			isa = PBXGroup;
 			children = (
+				C5356A23242F9ED300EFD310 /* Resources */,
 				C5D691A2242AAEFA004268C3 /* Extensions */,
 				C5D69165242AA3F7004268C3 /* Settings */,
 				C5D69166242AA405004268C3 /* Config */,
@@ -226,6 +294,8 @@
 		C5D6916C242AA460004268C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C5356A36242FC1E600EFD310 /* Language */,
+				C5356A31242FBADB00EFD310 /* Settings */,
 				C5D691CD242AFEB0004268C3 /* DatePicker */,
 				C5D691B1242AD26C004268C3 /* Qr */,
 				C5D6919B242AADBD004268C3 /* Main */,
@@ -392,6 +462,8 @@
 			knownRegions = (
 				en,
 				Base,
+				hy,
+				ru,
 			);
 			mainGroup = C5D69141242AA091004268C3;
 			productRefGroup = C5D6914B242AA091004268C3 /* Products */;
@@ -409,11 +481,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5D69185242AABD2004268C3 /* LoginViewController.xib in Resources */,
+				C5356A3A242FC1F900EFD310 /* LanguageViewController.xib in Resources */,
 				C5D6915A242AA094004268C3 /* LaunchScreen.storyboard in Resources */,
+				C5356A42242FCB4700EFD310 /* LanguageCell.xib in Resources */,
+				C5356A2C242FA06000EFD310 /* Localizable.strings in Resources */,
 				C5D6919A242AAD3F004268C3 /* FormCreateViewController.xib in Resources */,
 				C5D691B5242AD290004268C3 /* QrViewController.xib in Resources */,
 				C5D691D1242AFEB0004268C3 /* DatePickerViewController.xib in Resources */,
 				C5D69190242AAC86004268C3 /* FormListViewController.xib in Resources */,
+				C5356A35242FBAF800EFD310 /* SettingsViewController.xib in Resources */,
 				C5D691B0242AC607004268C3 /* WelcomeViewController.xib in Resources */,
 				C5D69157242AA094004268C3 /* Assets.xcassets in Resources */,
 				C5D69155242AA091004268C3 /* Main.storyboard in Resources */,
@@ -477,6 +553,8 @@
 				C5D691C0242AE5E2004268C3 /* FormCreateResponse.swift in Sources */,
 				C5D69199242AAD3F004268C3 /* FormCreateViewController.swift in Sources */,
 				C5D6917F242AA5D9004268C3 /* CheckBaseHelper.swift in Sources */,
+				C5356A34242FBAF800EFD310 /* SettingsViewController.swift in Sources */,
+				C5356A39242FC1F900EFD310 /* LanguageViewController.swift in Sources */,
 				C5D6914E242AA091004268C3 /* AppDelegate.swift in Sources */,
 				C5D6918F242AAC86004268C3 /* FormListViewController.swift in Sources */,
 				C5D69173242AA539004268C3 /* BaseService.swift in Sources */,
@@ -493,6 +571,7 @@
 				C5D691B4242AD290004268C3 /* QrViewController.swift in Sources */,
 				C5D691AB242AC17D004268C3 /* UIView+Extensions.swift in Sources */,
 				C5D69177242AA573004268C3 /* ValidationError.swift in Sources */,
+				C5356A3D242FC9F900EFD310 /* Language.swift in Sources */,
 				C5D2A72B242B20AC00825031 /* FormFinishService.swift in Sources */,
 				C5D6917D242AA5BE004268C3 /* UserDefaultsHelper.swift in Sources */,
 				C5D691BC242AE1F8004268C3 /* FormCreateRequestForm.swift in Sources */,
@@ -500,6 +579,7 @@
 				C5D6917B242AA5AA004268C3 /* DateFormat.swift in Sources */,
 				C5D69181242AA5EB004268C3 /* AlertControllerHelper.swift in Sources */,
 				C5D69175242AA55A004268C3 /* BaseState.swift in Sources */,
+				C5356A41242FCB4700EFD310 /* LanguageCell.swift in Sources */,
 				C5D691B8242AD62A004268C3 /* FormListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,10 +587,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		C5356A2E242FA06000EFD310 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5356A2D242FA06000EFD310 /* en */,
+				C5356A2F242FA06D00EFD310 /* hy */,
+				C5356A30242FA07000EFD310 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		C5D69153242AA091004268C3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C5D69154242AA091004268C3 /* Base */,
+				C5356A28242FA03000EFD310 /* hy */,
+				C5356A2A242FA05100EFD310 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -519,6 +611,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				C5D69159242AA094004268C3 /* Base */,
+				C5356A29242FA03000EFD310 /* hy */,
+				C5356A2B242FA05100EFD310 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -530,6 +624,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -590,6 +685,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
