@@ -16,13 +16,13 @@
 "CREATE_FORM" = "Ստեղծել ձևաթուղթ";
 "CREATE" = "Ստեղծել";
 
-"FOMR" = "Ձևաթուղթ";
+"FORM" = "Ձևաթուղթ";
 "FINISH" = "Ավարտել";
 
 "OUT_ADDRESS" = "Ելքի ժամ";
 "OUT_DATETIME" = "Ելքի հասցե";
 "Estimated Return Time" = "Վերադարձի ակնկալվող ժամը";
-"Address of the place of visit/title" = "Այցելության վայրի հասցե/անվանում";
+"Address of the place of visit/Title" = "Այցելության վայրի հասցե/անվանում";
 "Purpose of the visit" = "Այցելության նպատակը";
 
 "APP_VERSION" = "Հավելվածի տարբերակ";
