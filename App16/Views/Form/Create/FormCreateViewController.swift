@@ -25,14 +25,20 @@ class FormCreateViewController: UIViewController {
     @IBOutlet weak var outAddressTextFiled: UITextField!
     @IBOutlet weak var destinationAddressTextField: UITextField!
     @IBOutlet weak var planneDateTimeTextField: UITextField!
-    
     @IBOutlet weak var destinationTypeTextField: UITextField!
+    
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var outDateButtonAction: UIButton!
     @IBOutlet weak var planneDateTimeButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var outDateTimeTextLabel: UILabel!
+    @IBOutlet weak var outAddressTextLabel: UILabel!
+    @IBOutlet weak var destinationAddressTextLabel: UILabel!
+    @IBOutlet weak var planneDateTimeTextLabel: UILabel!
+    @IBOutlet weak var destinationTypeTextLabel: UILabel!
     
     // MARK: - Variables
     var data: FormResponse!
@@ -43,20 +49,22 @@ class FormCreateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUI()
+        
         switch formViewType {
         case .creta:
             
             createButton.isHidden = false
-            self.title = "Ստեղծել ձևաթուղթ"
+            self.title = "CREATE_FORM".localized()
             curentDate.text = date
         case .viewFromList:
             
-            self.title = "Ձևաթուղթ"
+            self.title = "FORM".localized()
             createButton.isHidden = true
             setData(response: data)
         case .viewFromQr:
             
-            self.title = "Ձևաթուղթ"
+            self.title = "FORM".localized()
             createButton.isHidden = true
             retriveCurentForm()
         }
@@ -66,6 +74,16 @@ class FormCreateViewController: UIViewController {
             let middleName = UserDefaultsHelper.getString(for: .middleName) {
             nameLabel.text = "\(firstName) \(lastName) \(middleName)"
         }
+    }
+    
+    private func setUI() {
+        
+        createButton.setTitle("CREATE".localized(), for: .normal)
+        outDateTimeTextLabel.text = "OUT_ADDRESS".localized()
+        outAddressTextLabel.text = "OUT_DATETIME".localized()
+        destinationAddressTextLabel.text = "Address of the place of visit/Title".localized()
+        planneDateTimeTextLabel.text = "Estimated Return Time".localized()
+        destinationTypeTextLabel.text = "Purpose of the visit".localized()
     }
     
     // MARK: - Actions

@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
     private func openLoginViewController() {
         
         let controller = LoginViewController()
-        changeRoot(controller)
+         changeRoot(UINavigationController(rootViewController: controller))
     }
     
     private func openQRController() {

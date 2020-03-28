@@ -22,12 +22,19 @@ class QrViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUI()
         if let teviceId = UIDevice.current.identifierForVendor?.uuidString {
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
             let url = "https://app16.x-tech.am/api/v1/applications/qr_code?device_token=\(teviceId)"
             setImage(url, imageView: qrImageView)
         }
+    }
+    
+    private func setUI() {
+        
+        fomrButton.setTitle("FORM".localized(), for: .normal)
+        finishButton.setTitle("FINISH".localized(), for: .normal)
     }
     
     // MARK: - Actions
@@ -77,14 +84,10 @@ class QrViewController: UIViewController {
               case .base(response: let baseResposne):
                 CheckBaseHelper.checkBaseResponse(baseResposne, viewController: self)
               case .success(_):
-                
                 self.openWelcomeView()
               case .isOffline:
-                
                 return
               case .conflict:
-                
-                
                   return
               }
           }

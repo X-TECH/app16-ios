@@ -14,17 +14,27 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var createFormButton: UIButton!
     @IBOutlet weak var historyButton: UIButton!
+    @IBOutlet weak var nameTextLabel: UILabel!
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUI()
         setRightBarButton()
         
         let firstName = UserDefaultsHelper.getString(for: .firstName)
         let lastName = UserDefaultsHelper.getString(for: .lstName)
         
         nameLabel.text = (firstName ?? "-") + " " + (lastName ?? "-")
+    }
+    
+    
+    private func setUI() {
+        
+        nameTextLabel.text = "WELCOME".localized()
+        createFormButton.setTitle("CREATE_FORM".localized(), for: .normal)
+        historyButton.setTitle("HISTORY".localized(), for: .normal)
     }
     
     private func setRightBarButton() {

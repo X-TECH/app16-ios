@@ -18,14 +18,37 @@ class LoginViewController: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        firstNameTextField.attributedPlaceholder = NSAttributedString(string: "Անուն",
-                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.2)])
-        lastNameTextFiled.attributedPlaceholder = NSAttributedString(string: "Ազգանուն",
-                                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.2)])
-        middleNameTextField.attributedPlaceholder = NSAttributedString(string: "Հայրանուն",
-                                                                       attributes: [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.2)])
+        
+        setRightBarButton()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setUI()
+    }
+    
+    private func setUI() {
+        
+        firstNameTextField.attributedPlaceholder = NSAttributedString(string: "FIRST_NAME".localized(),
+                                                                      attributes: [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.2)])
+        lastNameTextFiled.attributedPlaceholder = NSAttributedString(string: "LAST_NAME".localized(),
+                                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.2)])
+        middleNameTextField.attributedPlaceholder = NSAttributedString(string: "MIDDLE_NAME".localized(),
+                                                                       attributes: [NSAttributedString.Key.foregroundColor: UIColor.black.withAlphaComponent(0.2)])
+        
+        nextButton.setTitle("NEXT".localized(), for: .normal)
+    }
+    
+    private func setRightBarButton() {
+          
+          let editButton = UIBarButtonItem.init(image: UIImage(named: "settings"),
+                                                style: .done,
+                                                target: self,
+                                                action: #selector(settingsActtions))
+        editButton.tintColor = .white
+          
+          self.navigationItem.rightBarButtonItem = editButton
+      }
     
     // MARK: - Navigation
     private func openCreateFormViewController() {
@@ -64,4 +87,13 @@ class LoginViewController: UIViewController {
             
         }
     }
+    
+    // MARK: - Actions
+    @IBAction func settingsActtions() {
+        
+        let controller = SettingsViewController()
+        self.navigationController?.navigationBar.topItem?.title = " "
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
 }
