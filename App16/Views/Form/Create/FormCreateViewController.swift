@@ -50,34 +50,18 @@ class FormCreateViewController: UIViewController {
         super.viewDidLoad()
         
         setUI()
-        
-        switch formViewType {
-        case .creta:
-            
-            createButton.isHidden = false
-            self.title = "CREATE_FORM".localized()
-            curentDate.text = date
-        case .viewFromList:
-            
-            self.title = "FORM".localized()
-            createButton.isHidden = true
-            setData(response: data)
-        case .viewFromQr:
-            
-            self.title = "FORM".localized()
-            createButton.isHidden = true
-            retriveCurentForm()
-        }
+    }
+    
+    private func setUI() {
         
         if let firstName = UserDefaultsHelper.getString(for: .firstName),
             let lastName = UserDefaultsHelper.getString(for: .lstName),
             let middleName = UserDefaultsHelper.getString(for: .middleName) {
             nameLabel.text = "\(firstName) \(lastName) \(middleName)"
         }
-    }
-    
-    private func setUI() {
         
+        curentDate.text = date
+        self.title = "CREATE_FORM".localized()
         createButton.setTitle("CREATE".localized(), for: .normal)
         outDateTimeTextLabel.text = "OUT_ADDRESS".localized()
         outAddressTextLabel.text = "OUT_DATETIME".localized()
@@ -117,7 +101,7 @@ class FormCreateViewController: UIViewController {
             || outAddressTextFiled.text == ""
             || destinationAddressTextField.text == "" || planneDateTimeTextField.text == "" {
             
-            let alertController = AlertControllerHelper.showAlert(title: nil, message: "Խնդում ենք լրացրեք բոլոր դաշտերը")
+            let alertController = AlertControllerHelper.showAlert(title: nil, message: "Please fill in all fields".localized())
             self.present(alertController, animated: true, completion: nil)
         }else {
             createForm()
@@ -172,59 +156,5 @@ class FormCreateViewController: UIViewController {
                 return
             }
         }
-    }
-    
-    private func retriveCurentForm() {
-        
-        activityIndicator.isHidden = false
-        activityIndicator.startAnimating()
-        
-        let form = CurentFormRequestForm(deviceToken: UIDevice.current.identifierForVendor?.uuidString)
-        
-        CurrentFormService.shered.retrive(data: form) { (responseData) in
-            switch responseData {
-            case .base(response: let baseResposne):
-                
-                self.activityIndicator.stopAnimating()
-                CheckBaseHelper.checkBaseResponse(baseResposne, viewController: self)
-            case .success(let response):
-                
-                self.activityIndicator.stopAnimating()
-                DispatchQueue.main.async {
-                    self.setData(response: response.data )
-                }
-            case .isOffline:
-                
-                self.activityIndicator.stopAnimating()
-                return
-            case .conflict:
-                
-                self.activityIndicator.stopAnimating()
-                return
-            }
-        }
-    }
-    
-    private func setData(response: FormResponse?) {
-        
-        destinationAddressTextField.isUserInteractionEnabled = false
-        planneDateTimeTextField.isUserInteractionEnabled = false
-        destinationTypeTextField.isUserInteractionEnabled = false
-        destinationAddressTextField.isUserInteractionEnabled = false
-        
-        outDateButtonAction.isUserInteractionEnabled = false
-        planneDateTimeButton.isUserInteractionEnabled = false
-        outAddressTextFiled.isUserInteractionEnabled = false
-        
-        outDateTimeTextFiled.isUserInteractionEnabled = false
-        planneDateTimeTextField.isUserInteractionEnabled = false
-        
-        outDateTimeTextFiled.text = response?.outDatetime
-        outAddressTextFiled.text = response?.outAddress
-        
-        destinationAddressTextField.text = response?.visitingAddressAndName
-        planneDateTimeTextField.text = response?.plannedReturnDatetime
-        destinationTypeTextField.text = response?.visitingReason
-        curentDate.text = response?.createdAt
     }
 }
