@@ -6,6 +6,8 @@
   Copyright © 2020 X-TECH. All rights reserved.
 */
 
+"OK" = "Ok";
+
 "FIRST_NAME" = "Имя";
 "LAST_NAME" = "Фамилия";
 "MIDDLE_NAME" = "Отчество";
@@ -30,3 +32,5 @@
 "LANGUAGE" = "Язык";
 "LANGUAGES" = "Языки";
 "CANCEL" = "Отменить";
+
+"Please fill in all fields" = "Пожалуйста, заполните все поля";

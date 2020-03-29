@@ -6,6 +6,8 @@
   Copyright © 2020 X-TECH. All rights reserved.
 */
 
+"OK" = "Ok";
+
 "FIRST_NAME" = "Fist name";
 "LAST_NAME" = "Last name";
 "MIDDLE_NAME" = "Middle name";
@@ -30,3 +32,5 @@
 "LANGUAGE" = "Language";
 "LANGUAGES" = "Languages";
 "CANCEL" = "Cancel";
+
+"Please fill in all fields" = "Please fill in all fields";

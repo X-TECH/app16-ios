@@ -17,18 +17,16 @@ class QrViewController: UIViewController {
     @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    // MARK: - Variables
+    let downloader = ImageDownloader()
+    var urlRequest: URLRequest?
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        downloaderQR()
         setUI()
-        if let teviceId = UIDevice.current.identifierForVendor?.uuidString {
-            activityIndicator.isHidden = false
-            activityIndicator.startAnimating()
-            let url = "https://app16.x-tech.am/api/v1/applications/qr_code?device_token=\(teviceId)"
-            setImage(url, imageView: qrImageView)
-        }
     }
     
     private func setUI() {
@@ -37,14 +35,29 @@ class QrViewController: UIViewController {
         finishButton.setTitle("FINISH".localized(), for: .normal)
     }
     
+    private func downloaderQR() {
+        
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+        if let teviceId = UIDevice.current.identifierForVendor?.uuidString {
+            urlRequest = URLRequest(url: URL(string: "https://app16.x-tech.am/api/v1/applications/qr_code?device_token=\(teviceId)")!)
+            downloader.download(urlRequest!) { response in
+                if case .success(let image) = response.result {
+                    print(image)
+                    self.qrImageView.image = image
+                    self.activityIndicator.stopAnimating()
+                }
+            }
+        }
+    }
+    
     // MARK: - Actions
     @IBAction func formButtonAction(_ sender: UIButton) {
         openCreateFormView()
     }
     
     @IBAction func finshButtonAction(_ sender: UIButton) {
-         retriveCurentForm()
-        
+        finishCurentForm()
     }
     
     private func openWelcomeView() {
@@ -55,8 +68,8 @@ class QrViewController: UIViewController {
     
     private func openCreateFormView() {
         
-        let controller = FormCreateViewController()
-        controller.formViewType = .viewFromQr
+        let controller = SingleFormViewController()
+        
         self.navigationController?.navigationBar.topItem?.title = " "
         self.navigationController?.pushViewController(controller, animated: true)
     }
@@ -76,20 +89,21 @@ class QrViewController: UIViewController {
         }
     }
     
-    private func retriveCurentForm() {
-          
+    // MARK: - Request
+    private func finishCurentForm() {
+        
         let form = CurentFormRequestForm(deviceToken: UIDevice.current.identifierForVendor?.uuidString)
         FormFinishService.shered.finishForm(data: form) { (responseData) in
-              switch responseData {
-              case .base(response: let baseResposne):
+            switch responseData {
+            case .base(response: let baseResposne):
                 CheckBaseHelper.checkBaseResponse(baseResposne, viewController: self)
-              case .success(_):
+            case .success(_):
                 self.openWelcomeView()
-              case .isOffline:
+            case .isOffline:
                 return
-              case .conflict:
-                  return
-              }
-          }
-      }
+            case .conflict:
+                return
+            }
+        }
+    }
 }

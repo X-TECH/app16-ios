@@ -96,9 +96,8 @@ extension FormListViewController: UITableViewDelegate {
     
     private func openCreateFormView(index: Int) {
         
-        let controller = FormCreateViewController()
-        controller.formViewType = .viewFromList
-        controller.data = dataSource[index]
+        let controller = SingleFormViewController()
+        controller.formData = dataSource[index]
         self.navigationController?.navigationBar.topItem?.title = " "
         self.navigationController?.pushViewController(controller, animated: true)
     }

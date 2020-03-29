@@ -6,6 +6,8 @@
   Copyright © 2020 X-TECH. All rights reserved.
 */
 
+"OK" = "Լավ";
+
 "FIRST_NAME" = "Անուն";
 "LAST_NAME" = "Ազգանուն";
 "MIDDLE_NAME" = "հայրանուն";
@@ -30,3 +32,5 @@
 "LANGUAGE" = "Լեզու";
 "LANGUAGES" = "Լեզուներ";
 "CANCEL" = "Չեղարկել";
+
+"Please fill in all fields" = "Խնդում ենք լրացրեք բոլոր դաշտերը";
