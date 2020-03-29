@@ -60,6 +60,7 @@ class FormCreateViewController: UIViewController {
             nameLabel.text = "\(firstName) \(lastName) \(middleName)"
         }
         
+        curentDate.text = date
         self.title = "CREATE_FORM".localized()
         createButton.setTitle("CREATE".localized(), for: .normal)
         outDateTimeTextLabel.text = "OUT_ADDRESS".localized()
