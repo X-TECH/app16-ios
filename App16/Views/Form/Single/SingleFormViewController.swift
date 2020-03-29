@@ -11,24 +11,19 @@ import UIKit
 class SingleFormViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var fistNameTextLabel: UILabel!
-    @IBOutlet weak var lastNameTextLabel: UILabel!
-    @IBOutlet weak var meddleNameTextLabel: UILabel!
     @IBOutlet weak var outDateTimeTextLabel: UILabel!
     @IBOutlet weak var outAddressTextLabel: UILabel!
     @IBOutlet weak var destinationAddressTextLabel: UILabel!
     @IBOutlet weak var planneDateTimeTextLabel: UILabel!
     @IBOutlet weak var destinationTypeTextLabel: UILabel!
     
-    @IBOutlet weak var fistNameLabel: UILabel!
-    @IBOutlet weak var lastNameLabel: UILabel!
-    @IBOutlet weak var meddleNameLabel: UILabel!
     @IBOutlet weak var outDateTimeLabel: UILabel!
     @IBOutlet weak var outAddressLabel: UILabel!
     @IBOutlet weak var destinationAddressLabel: UILabel!
     @IBOutlet weak var planneDateTimeLabel: UILabel!
     @IBOutlet weak var destinationTypeLabel: UILabel!
     
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var curentDateLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -50,9 +45,6 @@ class SingleFormViewController: UIViewController {
     private func setUI() {
         
         self.title = "FORM".localized()
-        fistNameLabel.text = "FIRST_NAME".localized()
-        lastNameLabel.text = "LAST_NAME".localized()
-        meddleNameLabel.text = "MEDDLE_NAME".localized()
         
         outDateTimeTextLabel.text = "OUT_ADDRESS".localized()
         outAddressTextLabel.text = "OUT_DATETIME".localized()
@@ -63,9 +55,13 @@ class SingleFormViewController: UIViewController {
     
     private func setData(response: FormResponse?) {
         
-        fistNameLabel.text = response?.firstName
-        lastNameLabel.text = response?.lastName
-        meddleNameLabel.text = response?.middleName
+        if let firstName = response?.firstName,
+            let lastName = response?.lastName,
+            let middleName = response?.middleName {
+            nameLabel.text = "\(firstName) \(lastName) \(middleName)"
+        }else {
+            nameLabel.text = nil
+        }
         
         outDateTimeLabel.text = response?.outDatetime
         outAddressLabel.text = response?.outAddress
